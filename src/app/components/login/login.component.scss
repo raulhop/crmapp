@@ -1,0 +1,60 @@
+
+.da {
+  position: fixed;
+  left: 50%;
+  top: 30%;
+
+  .logIn {
+    position:relative; 
+    left:-50%;
+    height: 300px;
+    width: 300px;
+    color: white;
+    border-radius: 4px;
+    .title{
+        font-size: 40px;
+        padding-left: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: "Allerta Stencil", Sans-serif;
+    }
+    input{
+        padding-top: 25px;
+        border: none;
+        border-bottom: 1px solid #5b5b5b;
+        background-color:  #2c2c2c;
+        width: 330px;
+        color: white;
+    }
+    input:focus {
+        outline: none;
+        border-bottom: 1px solid white;
+    }
+    .Login{
+        margin-top: 25px;
+        border: 2px solid #a1a1a1;
+        border-radius: 10px;
+        background-color:  #2c2c2c;
+        color: #a1a1a1;
+        width: 90px;
+        height: 40px;
+    }
+    .register{
+        font-size: 12px;
+    }
+    .error{
+        font-size: 12px;
+        color: red;
+    }
+    button:hover{
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 0 3pt 2pt white;
+        color: white;
+    }
+    button:focus{
+        outline: none;
+    }
+    
+  }
+}

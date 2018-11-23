@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+<div class="da">
+  <div class="logIn">
+    <div class="title">HOP</div>
+    <form #form="ngForm" novalidate>
+      <div>
+        Register
+      </div>
+      <div>
+        <input type="text" name="firstName" #firstName="ngModel" required placeholder="First name" autocomplete="off"
+          ngModel>
+        <div *ngIf="firstName.errors?.required && firstName.dirty" class="error">
+          *First name is required
+        </div>
+      </div>
+      <div>
+        <input type="text" name="lastName" #lastName="ngModel" required placeholder="Last name" autocomplete="off"
+          ngModel>
+        <div *ngIf="lastName.errors?.required && lastName.dirty" class="error">
+          *Last name is required
+        </div>
+      </div>
+      <div>
+        <input type="date" name="dob" #dob="ngModel" required ngModel data-placeholder="Date of birth" autocomplete="off"
+          required aria-required="true" />
+        <div *ngIf="dob.errors?.required && dob.dirty" class="error">
+          *Date of birth is required
+        </div>
+      </div>
+      <div>
+        <input type="text" name="country" #country="ngModel" required placeholder="Country" autocomplete="off" ngModel>
+        <div *ngIf="country.errors?.required && country.dirty" class="error">
+          *Country is required
+        </div>
+      </div>
+      <div>
+        <input type="text" name="city" #city="ngModel" required placeholder="City" autocomplete="off" ngModel>
+        <div *ngIf="city.errors?.required && city.dirty" class="error">
+          *City is required
+        </div>
+      </div>
+      <div>
+        <input type="email" #email="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email"
+          placeholder="Email" autocomplete="off" ngModel>
+        <div *ngIf="email.errors?.required && email.dirty" class="error">
+          *Email is required
+        </div>
+        <div *ngIf="email.errors?.pattern" class="error">
+          *Email does not have a supported domain
+        </div>
+      </div>
+      <div>
+        <input type="password" name="pass" #pass="ngModel" minlength="5" required placeholder="Password" autocomplete="off"
+          ngModel>
+        <div *ngIf="pass.errors?.required && pass.dirty" class="error">
+          *Password is required
+        </div>
+        <div *ngIf="pass.errors?.minlength" class="error">
+          *Password is too short
+        </div>
+      </div>
+      <div>
+        <input type="password" name="rpass" #rpass="ngModel" pattern="{{pass.value}}" minlength="5" required
+          placeholder="Repeat password" autocomplete="off" ngModel>
+        <div *ngIf="rpass.errors?.required && rpass.dirty" class="error">
+          *Password is required
+        </div>
+        <div *ngIf="rpass.errors?.minlength" class="error">
+          *Password is too short
+        </div>
+        <div *ngIf="rpass.errors?.pattern" class="error">
+          *Second password doesnt match the first one
+        </div>
+      </div>
+      <button class="register" type="submit" [disabled]="form.invalid">Register</button>
+      <div class="login">
+        <p>Already have an account? Login <a href="#" routerLink="/login">here</a>.</p>
+      </div>
+    </form>
+  </div>
+</div>

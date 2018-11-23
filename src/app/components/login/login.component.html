@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+<div class="da">
+  <div class="logIn">
+    <div class="title">HOP</div>
+    <form #form="ngForm" novalidate>
+      <div>
+        Login
+      </div>
+      <div>
+        <input type="text" #email="ngModel" name="email" autocomplete="off" placeholder="Email" ngModel>
+      </div>
+      <div>
+        <input type="password" #password autocomplete="off" name="pass" placeholder="Password" ngModel>
+      </div>
+      <div *ngIf="error" class="error">
+        Wrong email or password. Try again.
+      </div>
+      <div>
+        <button (click)="logIn(email.value, password.value)" class="Login">Login</button>
+      </div>
+      <div class="register">
+        <p>Don't have an account? Register <a href="#" routerLink="/register">here</a> for free.</p>
+      </div>
+    </form>
+  </div>
+</div>
