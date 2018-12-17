@@ -72,7 +72,7 @@
           *Second password doesnt match the first one
         </div>
       </div>
-      <button class="register" type="submit" [disabled]="form.invalid">Register</button>
+      <button class="register" (click)="addUser(firstName.value, lastName.value, dob.value, country.value, city.value, email.value, pass.value)" type="submit" [disabled]="form.invalid">Register</button>
       <div class="login">
         <p>Already have an account? Login <a href="#" routerLink="/login">here</a>.</p>
       </div>

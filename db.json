@@ -1,0 +1,15 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "firstName": "Raul",
+      "lastName": "Hopota",
+      "dob": "12.12.1996",
+      "phone": "0761774637",
+      "country": "Romania",
+      "city": "Timisoara",
+      "email": "raulhopota@yahoo.com",
+      "action": "Sale"
+    }
+  ]
+}

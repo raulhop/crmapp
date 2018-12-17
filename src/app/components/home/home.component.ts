@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AccountService } from 'src/app/services/account/account.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  
+
+  public loggedInUser: string = this.accountService.loggedInUser;
+
+  constructor(private accountService: AccountService){}
 }

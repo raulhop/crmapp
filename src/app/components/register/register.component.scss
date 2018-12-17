@@ -3,8 +3,6 @@
   position: fixed;
   left: 50%;
   top: 2%;
-
-
   .logIn {
     position: relative;
     left: -50%;
@@ -43,7 +41,7 @@
       border: 2px solid #a1a1a1;
       border-radius: 10px;
       background-color: #2c2c2c;
-      color: #a1a1a1;
+      color: white;
       width: 90px;
       height: 40px;
     }
@@ -51,6 +49,7 @@
     .login {
       font-size: 12px;
     }
+    
 
     button:hover {
       border: none;

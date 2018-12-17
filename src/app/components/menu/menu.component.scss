@@ -1,0 +1,116 @@
+.navbar {
+  border-bottom: 1px solid #191919;
+}
+
+button {
+  background-color: #2c2c2c;
+  border: 1px solid #5b5b5b;
+  border-radius: 3px;
+  color: white;
+  outline: none;
+}
+
+
+#logoutModalContent {
+  background-color: #E5E5E5;
+
+  button {
+    background-color: #5b5b5b;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: #2c2c2c;
+  }
+
+  .modal-content {
+    font-size: 14px;
+  }
+
+  .modal-footer {
+    border-top: 1px solid #2c2c2c;
+  }
+
+  .modal-header {
+    border-bottom: 1px solid #2c2c2c;
+  }
+}
+
+#noButton {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+#yesButton {
+  margin-top: 20px;
+  margin-left: 170px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: #2c2c2c;
+
+  .navbar-brand {
+    color: #dbdee0;
+    font-size: 31px;
+    font-family: "Allerta Stencil", Sans-serif;
+  }
+
+  #left-search {
+
+    #link-id {
+      margin-right: 20px;
+    }
+  }
+
+
+  .navbar-nav {
+    a {
+      color: #dbdee0;
+    }
+
+    input {
+      border: none;
+      border-bottom: 1px solid #5b5b5b;
+      background-color: #2c2c2c;
+      width: 700px;
+      color: white;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    a:hover {
+      cursor: pointer;
+    }
+
+    #user {
+      margin-right: 30px;
+    }
+
+    button {
+      color: white;
+    }
+
+    .dropdown-menu {
+
+      a {
+        color: black;
+      }
+
+      a:hover {
+        color: white;
+      }
+    }
+
+    a:hover {
+      color: white;
+      background-color: #2E2E2E;
+      border-radius: 3px;
+    }
+  }
+}

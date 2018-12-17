@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+
 <div class="da">
   <div class="logIn">
     <div class="title">HOP</div>
@@ -16,7 +17,7 @@
         Wrong email or password. Try again.
       </div>
       <div>
-        <button (click)="logIn(email.value, password.value)" class="Login">Login</button>
+        <button type="submit" (click)="logIn(email.value, password.value)" class="Login">Login</button>
       </div>
       <div class="register">
         <p>Don't have an account? Register <a href="#" routerLink="/register">here</a> for free.</p>

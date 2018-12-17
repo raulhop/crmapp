@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AccountService } from '../../services/account/account.service';
+import { Account } from '../../models/account.interface';
 
 
 @Component({
@@ -8,21 +10,31 @@ import { Router } from '@angular/router';
     styleUrls: ['./login.component.scss']
 })
 
-export class LoginComponent {
-    public email: string;
-    public error: boolean;
+export class LoginComponent implements OnInit {
 
-    constructor(private router: Router){
+    public error: boolean = false;
 
+    constructor(private router: Router, private accountService: AccountService){
+        
+    }
+    ngOnInit(){
+        this.accountService
+        .getUsers()
+        .subscribe((users : Account[]) => this.accountService.users = users);
     }
 
     public logIn(email: string, password: string) {
-        if (email == "admin" && password == "admin"){
-            console.log("Corect!");
-            this.router.navigate(['/home']);
-        }
-        else {
-            this.error = true;
-        }
+        
+        this.accountService.users.forEach(element => {
+            console.log(element);
+            if (email == element.email && password == element.password){
+                this.router.navigate(['/home']);
+                this.accountService.loggedInUser = element.firstName + " " + element.lastName;
+            }
+            else{
+                this.error = true;
+            }
+        });
+        
     }
 }

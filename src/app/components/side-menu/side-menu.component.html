@@ -1,0 +1,30 @@
+<div class="side-menu">
+  <div id="user">
+    <i class="fa fa-user fa-3x"></i>
+    <div class="user-name">
+      Name
+    </div>
+    <div class="user-info">
+      Information
+    </div>
+  </div>
+  <div class="views">
+    <a>Views</a>
+  </div>
+  <nav class="nav flex-column">
+    <a class="nav-link" routerLink="/home"><i class="fa fa-th-list"></i>Dashbord</a>
+    <a class="nav-link" routerLink="/home"><i class="fa fa-bar-chart-o"></i>Charts</a>
+    <a class="nav-link" routerLink="/home"><i class="fa fa-table"></i>Tables</a>
+    <a class="nav-link" routerLink="/home"><i class="fa fa-tasks"></i>Tasks</a>
+    <a class="nav-link" routerLink="/home"><i class="fa fa-users"></i>Clients</a>
+    <a class="nav-link" routerLink="/home"><i class="fa fa-user"></i>Profile</a>
+  </nav>
+  <div class="actions">
+    <a>Actions</a>
+  </div>
+  <nav class="nav flex-column">
+    <a class="nav-link" [routerLink]="['/home/add-client']"><i class="fa fa-plus"></i>Add client</a>
+    <a class="nav-link" routerLink="/home"><i class="fa fa-minus"></i>Delete client</a>
+    <a class="nav-link" routerLink="/home"><i class="fa fa-recycle"></i>Update client</a>
+  </nav>
+</div>

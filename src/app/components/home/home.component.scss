@@ -1,19 +1,14 @@
+.container{
+  height: 100vh;
+  background: #E5E5E5;
+  margin: 0;
+  padding: 0;
+  max-width: 3000px;
+  max-height: 3000px;
 
-.navbar {
-  background-color: #621045;
-
-  .navbar-brand {
-    color: #dbdee0;
-    font-weight: bold;
-    font-size: 25px;
-  }
-
-  .navbar-nav {
-    a {
-      color: #dbdee0;
-    }   
-    a:hover {
-      color: white;
-    }
+  .right-content{
+    padding-top: 73px;
+    margin-left: 210px;
+    min-height: 650px;
   }
 }
