@@ -3,77 +3,98 @@
     <div id="new-client">Add new client</div>
   </div>
   <div class="add-client-content row">
-  <div class="client-form">
-    <form #form="ngForm" novalidate>
-      <div>
-        <div class="input-title">First name</div>
-        <input type="text" name="firstName" #firstName="ngModel" required placeholder="" autocomplete="off" ngModel>
-        <div *ngIf="firstName.errors?.required && firstName.dirty" class="error">
-          *First name is required
+    <div class="client-form">
+      <form #form="ngForm" novalidate>
+        <div>
+          <div class="input-title">First name</div>
+          <input type="text" name="firstName" #firstName="ngModel" required placeholder="" autocomplete="off" ngModel>
+          <div *ngIf="firstName.errors?.required && firstName.dirty" class="error">
+            *First name is required
+          </div>
         </div>
-      </div>
-      <div>
-        <div class="input-title">Last name</div>
-        <input type="text" name="lastName" #lastName="ngModel" required placeholder="" autocomplete="off" ngModel>
-        <div *ngIf="lastName.errors?.required && lastName.dirty" class="error">
-          *Last name is required
+        <div>
+          <div class="input-title">Last name</div>
+          <input type="text" name="lastName" #lastName="ngModel" required placeholder="" autocomplete="off" ngModel>
+          <div *ngIf="lastName.errors?.required && lastName.dirty" class="error">
+            *Last name is required
+          </div>
         </div>
-      </div>
-      <div>
-        <div class="input-title">Date of birth</div>
-        <input type="date" name="dob" #dob="ngModel" required ngModel data-placeholder="" autocomplete="off" required
-          aria-required="true" />
-        <div *ngIf="dob.errors?.required && dob.dirty" class="error">
-          *Date of birth is required
+        <div>
+          <div class="input-title">Date of birth</div>
+          <input type="date" name="dob" #dob="ngModel" required ngModel data-placeholder="" autocomplete="off" required
+            aria-required="true" />
+          <div *ngIf="dob.errors?.required && dob.dirty" class="error">
+            *Date of birth is required
+          </div>
         </div>
-      </div>
-      <div>
-        <div class="input-title">Phone number</div>
-        <input type="text" name="number" #number="ngModel" required placeholder="" autocomplete="off" ngModel>
-        <div *ngIf="number.errors?.required && number.dirty" class="error">
-          *Number is required
+        <div>
+          <div class="input-title">Phone number</div>
+          <input type="text" name="number" #number="ngModel" required placeholder="" autocomplete="off" ngModel>
+          <div *ngIf="number.errors?.required && number.dirty" class="error">
+            *Number is required
+          </div>
         </div>
-      </div>
-      <div>
-        <div class="input-title">Country</div>
-        <input type="text" name="country" #country="ngModel" required placeholder="" autocomplete="off" ngModel>
-        <div *ngIf="country.errors?.required && country.dirty" class="error">
-          *City is required
+        <div>
+          <div class="input-title">Country</div>
+          <input type="text" name="country" #country="ngModel" required placeholder="" autocomplete="off" ngModel>
+          <div *ngIf="country.errors?.required && country.dirty" class="error">
+            *City is required
+          </div>
         </div>
-      </div>
-      <div>
-        <div class="input-title">City</div>
-        <input type="text" name="city" #city="ngModel" required placeholder="" autocomplete="off" ngModel>
-        <div *ngIf="city.errors?.required && city.dirty" class="error">
-          *City is required
+        <div>
+          <div class="input-title">City</div>
+          <input type="text" name="city" #city="ngModel" required placeholder="" autocomplete="off" ngModel>
+          <div *ngIf="city.errors?.required && city.dirty" class="error">
+            *City is required
+          </div>
         </div>
-      </div>
-      <div>
-        <div class="input-title">Email</div>
-        <input type="email" #email="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email"
-          placeholder="" autocomplete="off" ngModel>
-        <div *ngIf="email.errors?.required && email.dirty" class="error">
-          *Email is required
+        <div>
+          <div class="input-title">Email</div>
+          <input type="email" #email="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email"
+            placeholder="" autocomplete="off" ngModel>
+          <div *ngIf="email.errors?.required && email.dirty" class="error">
+            *Email is required
+          </div>
+          <div *ngIf="email.errors?.pattern" class="error">
+            *Email does not have a supported domain
+          </div>
         </div>
-        <div *ngIf="email.errors?.pattern" class="error">
-          *Email does not have a supported domain
+        <div>
+          <div class="input-title">Action</div>
+          <select #action="ngModel" name="action" ngModel required>
+            <option value="sale">Sale</option>
+            <option value="rent">Rent</option>
+          </select>
+          <div *ngIf="action.errors?.required && action.dirty" class="error">
+            *An action value is required
+          </div>
         </div>
-      </div>
-      <div>
-        <div class="input-title">Action</div>
-        <select #action="ngModel" name="action" ngModel required>
-          <option value="sale">Sale</option>
-          <option value="rent">Rent</option>
-        </select>
-        <div *ngIf="action.errors?.required && action.dirty" class="error">
-          *An action value is required
-        </div>
-      </div>
-      <button type="submit" class="add-button" (click)="addClient(firstName.value, lastName.value, dob.value, number.value, country.value, city.value, email.value, action.value)" [disabled]="form.invalid">Add client</button>
-    </form>
+        <button type="submit" class="add-button" (click)="addClient(firstName.value, lastName.value, dob.value, number.value, country.value, city.value, email.value, action.value)"
+          [disabled]="form.invalid">Add client</button>
+      </form>
+    </div>
+    <div class="client-list">
+      <h4>Your clients</h4>
+      <table class="table table-md table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Action</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of this.clientService.clients">
+            <td>{{client.id}}</td>
+            <td>{{client.firstName}}</td>
+            <td>{{client.lastName}}</td>
+            <td>{{client.action}}</td>
+            <td>{{client.email}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-  <div class="client-list">
-
-  </div>
-</div>
 </div>

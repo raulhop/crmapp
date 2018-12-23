@@ -16,13 +16,22 @@ export class ClientService {
   public clients: Client[];
 
   constructor(private http: Http) {
-   }
+  }
 
-   public getClients(): Observable<Client[]> {
+  public getClients(): Observable<Client[]> {
     return this.http
       .get(API_URL + '/clients')
       .pipe(
-       map((response: Response) => response.json())
+        map((response: Response) => response.json())
       );
   }
+
+ /* public addClient(client : Client): Observable<Client> {
+    return this.http
+    .get(API_URL + '/clients', client)
+    .pipe(
+
+    )
+  }
+*/
 }

@@ -13,13 +13,17 @@ export class AddClientComponent implements OnInit{
     constructor(private clientService: ClientService) { }
     ngOnInit(){
         this.clientService.getClients().subscribe((data: Client[]) =>{
-            console.log(data);
+            this.clientService.clients = data;
+            console.log(this.clientService.clients.length);
         });
+        
     }
 
     public addClient(firstName: string, lastName: string, dob: Date, number: string, country: string, city: string, email: string, action: string){
         let date : string = dob.toString();
-        let id : number = this.clientService.clients[length].id + 1;
+        console.log(this.clientService.clients);
+        let id : number = this.clientService.clients[this.clientService.clients.length-1].id + 1;
+        console.log(id);
         this.client =  {
              id: id,
              firstName: firstName,
