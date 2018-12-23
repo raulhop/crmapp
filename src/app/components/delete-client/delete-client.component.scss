@@ -1,0 +1,62 @@
+.delete-client-container{
+  overflow-x: hidden;
+  height: 100%;
+  min-height: 583px;
+  background-color: white;
+  .delete-client-title {
+    border-bottom: 1px solid #C0C0C0;
+    height: 50px;
+    background-color: #3b444b;
+
+    #new-client {
+      font-weight: bold;
+      margin-left: 20px;
+      padding-top: 12px;
+      font-size: 17px;
+      color: #dbdee0;
+    }
+  }
+  #select{
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: #3b444b;
+  }
+  .clients-table{
+    margin-left: 20px;
+    margin-right: 170px;
+    tr#tds{
+      font-size: 14px;
+      font-weight: 500;
+    }
+    tr#tds:hover{
+      font-size: 14px;
+      color: #87CEFA;
+      cursor: pointer;
+    }
+    .selected {
+      font-size: 14px;
+      color: #87CEFA;
+    }
+  }
+  .delete-button{
+    background-color: #B22222;
+    color: white;
+    width: 100px;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+  button:hover{
+    background-color: #8B0000;
+    cursor: pointer;
+  }
+  button:disabled {
+    opacity: 0.9;
+    cursor: not-allowed;
+    background-color: #B22222;
+  }
+}

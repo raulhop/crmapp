@@ -4,12 +4,34 @@
       "id": 1,
       "firstName": "Raul",
       "lastName": "Hopota",
-      "dob": "12.12.1996",
-      "phone": "0761774637",
+      "dob": "1996-12-12",
+      "number": "0761774637",
       "country": "Romania",
       "city": "Timisoara",
       "email": "raulhopota@yahoo.com",
-      "action": "Sale"
+      "action": "sale"
+    },
+    {
+      "id": 2,
+      "firstName": "Andrei",
+      "lastName": "Netotea",
+      "dob": "2018-12-07",
+      "number": "1234567890",
+      "country": "Romani",
+      "city": "Timisoara",
+      "email": "neto@gmail.com",
+      "action": "rent"
+    },
+    {
+      "id": 3,
+      "firstName": "Gigel",
+      "lastName": "Ioan",
+      "dob": "2018-12-13",
+      "number": "16573546575636",
+      "country": "Romania",
+      "city": "Lugoj",
+      "email": "gigi@gmail.com",
+      "action": "sale"
     }
   ]
 }

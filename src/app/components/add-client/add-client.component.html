@@ -75,7 +75,7 @@
     </div>
     <div class="client-list">
       <h4>Your clients</h4>
-      <table class="table table-md table-hover">
+      <table class="table table-md clients-table">
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -86,7 +86,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let client of this.clientService.clients">
+          <tr id="tds" *ngFor="let client of this.clientService.clients">
             <td>{{client.id}}</td>
             <td>{{client.firstName}}</td>
             <td>{{client.lastName}}</td>
@@ -95,6 +95,11 @@
           </tr>
         </tbody>
       </table>
+      <div *ngIf="this.added" id="hideMe" class="succes">Client added succsesfully<i class="fa fa-check" aria-hidden="true"></i>
+        <div id="refresh">
+          Refresh page to see the change in the table!
+        </div>
+      </div>
     </div>
   </div>
 </div>

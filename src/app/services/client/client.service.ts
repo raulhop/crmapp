@@ -26,12 +26,12 @@ export class ClientService {
       );
   }
 
- /* public addClient(client : Client): Observable<Client> {
+  public addClient(client : Client): Observable<Client> {
     return this.http
-    .get(API_URL + '/clients', client)
+    .post(API_URL + '/clients', client)
     .pipe(
-
-    )
+      map((response: Response) => response.json())
+    );
   }
-*/
+
 }

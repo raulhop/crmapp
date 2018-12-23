@@ -4,6 +4,7 @@ import { HomeComponent } from '../home/home.component';
 import { AddClientComponent } from '../add-client/add-client.component';
 import { RegisterComponent } from '../register/register.component';
 import { LoginComponent } from '../login/login.component';
+import { DeleteClientComponent } from '../delete-client/delete-client.component';
 
 const routes: Routes = [
     {
@@ -11,7 +12,8 @@ const routes: Routes = [
         component: HomeComponent,
         children: [
             { path: '', component: AddClientComponent },
-            { path: 'add-client', component: AddClientComponent }
+            { path: 'add-client', component: AddClientComponent },
+            { path: 'delete-client', component: DeleteClientComponent }
         ]
     },
     {

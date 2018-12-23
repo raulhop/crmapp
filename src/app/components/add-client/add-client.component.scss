@@ -22,7 +22,49 @@
     .client-list{
       margin-left: 50px;
       margin-top: 40px;
-
+      .clients-table{
+        tr#tds{
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+      .succes{
+        color: #3CB371;
+        font-weight: bold;
+        #refresh{
+          color: black;
+          font-weight: bold;
+          font-size: 12px;
+        }
+      }
+        #hideMe {
+          -moz-animation: cssAnimation 0s ease-in 5s forwards;
+          /* Firefox */
+          -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+          /* Safari and Chrome */
+          -o-animation: cssAnimation 0s ease-in 5s forwards;
+          /* Opera */
+          animation: cssAnimation 0s ease-in 5s forwards;
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+         
+      }
+      @keyframes cssAnimation {
+          to {
+              width:0;
+              height:0;
+              overflow:hidden;
+          }
+      }
+      @-webkit-keyframes cssAnimation {
+          to {
+              width:0;
+              height:0;
+              visibility:hidden;
+          }
+      }
+       
+      
     }
     .client-form {
       margin-left: 60px;

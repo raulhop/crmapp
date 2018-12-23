@@ -1,0 +1,41 @@
+<div class="delete-client-container">
+  <div class="delete-client-title">
+    <div id="new-client">Delete client</div>
+  </div>
+  <div id="select">Select a client from the list below and press the delete button</div>
+  <div class="clients-table">
+    <table class="table table-md">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">First name</th>
+          <th scope="col">Last name</th>
+          <th scope="col">Date of birth</th>
+          <th scope="col">Country</th>
+          <th scope="col">City</th>
+          <th scope="col">Action</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="tds" [class.selected]="client == selectedClient"
+        (click)="onSelect(client)"
+        *ngFor="let client of this.clientService.clients">
+          <td>{{client.id}}</td>
+          <td>{{client.firstName}}</td>
+          <td>{{client.lastName}}</td>
+          <td>{{client.dob}}</td>
+          <td>{{client.country}}</td>
+          <td>{{client.city}}</td>
+          <td>{{client.action}}</td>
+          <td>{{client.email}}</td>
+          <td>{{client.number}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button [disabled]="!selectedClient" class="delete-button">
+      Delete
+    </button>
+  </div>
+</div>

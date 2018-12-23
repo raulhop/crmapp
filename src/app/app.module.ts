@@ -15,6 +15,7 @@ import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { AddClientComponent } from './components/add-client/add-client.component';
 import { AppRoutingModule } from './components/home/app-routing.module';
 import { HttpModule } from '@angular/http';
+import { DeleteClientComponent } from './components/delete-client/delete-client.component';
 
 const ROUTES: Routes = [
   {
@@ -33,7 +34,8 @@ const ROUTES: Routes = [
     HomeComponent,
     MenuComponent,
     SideMenuComponent,
-    AddClientComponent
+    AddClientComponent,
+    DeleteClientComponent
   ],
   imports: [
     BrowserModule,
