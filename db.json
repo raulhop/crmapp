@@ -17,7 +17,7 @@
       "lastName": "Netotea",
       "dob": "2018-12-07",
       "number": "1234567890",
-      "country": "Romani",
+      "country": "Romania",
       "city": "Timisoara",
       "email": "neto@gmail.com",
       "action": "rent"
@@ -43,6 +43,17 @@
       "city": "Tokyo",
       "email": "giuly@yahoo.jp",
       "action": "sale"
+    },
+    {
+      "id": 5,
+      "firstName": "Marcel",
+      "lastName": "Lungu",
+      "dob": "2018-12-19",
+      "number": "78624567443",
+      "country": "Japonia",
+      "city": "Tokyo",
+      "email": "mirceanebunu@yahoo.com",
+      "action": "rent"
     }
   ]
 }
