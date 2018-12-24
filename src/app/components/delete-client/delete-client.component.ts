@@ -8,16 +8,20 @@ import { ClientService } from '../../services/client/client.service';
     styleUrls: ['./delete-client.component.scss']
 })
 
-export class DeleteClientComponent implements OnInit {
+export class DeleteClientComponent{
     public selectedClient: Client;
+    public deleted: boolean;
     constructor(private clientService: ClientService) { }
-    ngOnInit() {
-        this.clientService.getClients().subscribe((data: Client[]) => {
-            this.clientService.clients = data;
-            console.log(this.clientService.clients.length);
-        });
 
+    public deleteClient(){
+        this.clientService.deleteClient(this.selectedClient).subscribe((data: Client) => {
+            this.clientService.clients= this.clientService.clients.filter((client: Client) =>{
+                return client.id !== this.selectedClient.id;
+            });
+            this.deleted= true;
+        });
     }
+    
     public onSelect(client: Client){
         this.selectedClient= client;
     }

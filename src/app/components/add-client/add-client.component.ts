@@ -13,11 +13,6 @@ export class AddClientComponent implements OnInit {
     public added: boolean;
     constructor(private clientService: ClientService) { }
     ngOnInit() {
-        this.clientService.getClients().subscribe((data: Client[]) => {
-            this.clientService.clients = data;
-            console.log(this.clientService.clients.length);
-        });
-
     }
 
     public addClient(firstName: string, lastName: string, dob: Date, number: string, country: string, city: string, email: string, action: string) {

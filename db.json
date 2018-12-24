@@ -32,6 +32,17 @@
       "city": "Lugoj",
       "email": "gigi@gmail.com",
       "action": "sale"
+    },
+    {
+      "id": 4,
+      "firstName": "Vasile",
+      "lastName": "Giulan",
+      "dob": "1996-02-08",
+      "number": "0762226712",
+      "country": "Japonia",
+      "city": "Tokyo",
+      "email": "giuly@yahoo.jp",
+      "action": "sale"
     }
   ]
 }

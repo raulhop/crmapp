@@ -34,8 +34,21 @@
         </tr>
       </tbody>
     </table>
-    <button [disabled]="!selectedClient" class="delete-button">
+    <div *ngIf="this.deleted" id="hideMe" class="succes">Client deleted succsesfully<i class="fa fa-check" aria-hidden="true"></i>
+    </div>
+    <button [disabled]="!selectedClient" data-toggle="modal" data-target="#deleteModal" class="delete-button">
       Delete
     </button>
+  </div>
+</div>
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" id="deleteModalContent">
+      <div class="modal-body">
+        <p>You are permanently deleting a client. Are you sure?</p>
+        <button type="button" id="yesButton" data-dismiss="modal" (click)="deleteClient()">Delete</button>
+        <button type="button" id="noButton" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
   </div>
 </div>

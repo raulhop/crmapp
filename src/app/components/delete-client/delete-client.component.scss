@@ -59,4 +59,84 @@
     cursor: not-allowed;
     background-color: #B22222;
   }
+        .succes{
+        color: #3CB371;
+        font-weight: bold;
+        #refresh{
+          color: black;
+          font-weight: bold;
+          font-size: 12px;
+        }
+      }
+        #hideMe {
+          -moz-animation: cssAnimation 0s ease-in 5s forwards;
+          /* Firefox */
+          -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+          /* Safari and Chrome */
+          -o-animation: cssAnimation 0s ease-in 5s forwards;
+          /* Opera */
+          animation: cssAnimation 0s ease-in 5s forwards;
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+         
+      }
+      @keyframes cssAnimation {
+          to {
+              width:0;
+              height:0;
+              overflow:hidden;
+          }
+      }
+      @-webkit-keyframes cssAnimation {
+          to {
+              width:0;
+              height:0;
+              visibility:hidden;
+          }
+      }
+       
+ 
+}
+p{
+  margin-left:50px;
+}
+#deleteModalContent {
+  background-color: #E5E5E5;
+  font-size: 15px;
+  margin-top: 330px;
+  button {
+    background-color: #2c2c2c;
+    border: 1px solid #5b5b5b;
+    border-radius: 3px;
+    color: white;
+    outline: none;
+  }
+  button {
+    background-color: #5b5b5b;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: #2c2c2c;
+  }
+
+  .modal-footer {
+    border-top: 1px solid #2c2c2c;
+  }
+
+  .modal-header {
+    border-bottom: 1px solid #2c2c2c;
+  }
+  
+}
+#noButton {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+#yesButton {
+  margin-top: 10px;
+  margin-left: 170px;
+  font-weight: bold;
 }
