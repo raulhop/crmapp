@@ -1,0 +1,140 @@
+.update-client-container{
+  overflow-x: hidden;
+  height: 100%;
+  min-height: 583px;
+  background-color: white;
+  .update-client-title {
+    border-bottom: 1px solid #C0C0C0;
+    height: 50px;
+    background-color: #3b444b;
+
+    #new-client {
+      font-weight: bold;
+      margin-left: 20px;
+      padding-top: 12px;
+      font-size: 17px;
+      color: #dbdee0;
+    }
+  }
+  #select{
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: #3b444b;
+    font-style: italic;
+  }
+.edit-client{
+  
+  font-weight: 500;
+  font-size: 15px;
+  .edit{
+    border: none;
+    outline: none;
+    padding: 1px 0px;
+    margin: 2px;
+    margin-top: 7px;
+  }
+  ::placeholder{
+    font-style: italic;
+  }
+  input{
+    
+    font-weight: normal;
+    font-size: 13px;
+    margin-top: 5px;
+  } 
+  #s-client{
+    margin-top: 60px;
+    font-size: 19px;
+    font-weight: bold;
+    color: #3b444b;
+    font-style: italic;
+  }
+}
+  .clients-table{
+    margin-left: 20px;
+    margin-right: 70px;
+    tr#tds{
+      font-size: 14px;
+      font-weight: 500;
+    }
+    tr#tds:hover{
+      font-size: 14px;
+      color: #87CEFA;
+      cursor: pointer;
+    }
+    .selected {
+      font-size: 14px;
+      color: #87CEFA;
+    }
+  }
+  .update-button{
+    background-color: #388E8E;
+    color: white;
+    width: 100px;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+  button:hover{
+    background-color: #528B8B;
+    cursor: pointer;
+  }
+  button:disabled {
+    opacity: 0.9;
+    cursor: not-allowed;
+    background-color: #388E8E;
+  }
+        .succes{
+        margin-top: 30px;
+        color: #3CB371;
+        font-weight: bold;
+        font-size: 13px;
+      }
+        #hideMe {
+          -moz-animation: cssAnimation 0s ease-in 3s forwards;
+          /* Firefox */
+          -webkit-animation: cssAnimation 0s ease-in 3s forwards;
+          /* Safari and Chrome */
+          -o-animation: cssAnimation 0s ease-in 3s forwards;
+          /* Opera */
+          animation: cssAnimation 0s ease-in 3s forwards;
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+         
+      }
+      @keyframes cssAnimation {
+          to {
+              width:0;
+              height:0;
+              overflow:hidden;
+          }
+      }
+      @-webkit-keyframes cssAnimation {
+          to {
+              width:0;
+              height:0;
+              visibility:hidden;
+          }
+      }
+       
+ 
+}
+p{
+  margin-left:50px;
+}
+
+#noButton {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+#yesButton {
+  margin-top: 10px;
+  margin-left: 170px;
+  font-weight: bold;
+}

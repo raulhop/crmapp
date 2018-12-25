@@ -5,6 +5,7 @@ import { AddClientComponent } from '../add-client/add-client.component';
 import { RegisterComponent } from '../register/register.component';
 import { LoginComponent } from '../login/login.component';
 import { DeleteClientComponent } from '../delete-client/delete-client.component';
+import { UpdateClientComponent } from '../update-client/update-client.component';
 
 const routes: Routes = [
     {
@@ -13,7 +14,8 @@ const routes: Routes = [
         children: [
             { path: '', component: AddClientComponent },
             { path: 'add-client', component: AddClientComponent },
-            { path: 'delete-client', component: DeleteClientComponent }
+            { path: 'delete-client', component: DeleteClientComponent },
+            { path: 'update-client', component: UpdateClientComponent }
         ]
     },
     {

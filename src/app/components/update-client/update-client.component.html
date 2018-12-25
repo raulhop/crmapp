@@ -1,0 +1,64 @@
+<div class="update-client-container">
+  <div class="update-client-title">
+    <div id="new-client">Edit client</div>
+  </div>
+  <div class="update-content row">
+    <div class="clients-table col-md">
+      <div id="select">Select a client from the list below and press the edit button</div>
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="tds" [class.selected]="client == selectedClient" (click)="onSelect(client)" *ngFor="let client of this.clientService.clients">
+            <td>{{client.id}}</td>
+            <td>{{client.firstName}}</td>
+            <td>{{client.lastName}}</td>
+            <td>{{client.action}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button *ngIf="edit" [disabled]="!selectedClient" (click)="onEdit()" class="update-button">
+        Edit
+      </button>
+    </div>
+    <div class="edit-client col-md">
+      <div id="s-client">
+        Selected client
+      </div>
+      <form #form="ngForm" novalidate>
+          Id: <input [class.edit]="edit" type="text" placeholder=" 1" name="id" #id="ngModel"
+          required autocomplete="off" [ngModel]="selectedClient?.id" [readonly]="edit"><br>
+        Firstname: <input [class.edit]="edit" type="text" placeholder=" John" name="firstName" #firstName="ngModel"
+          required autocomplete="off" [ngModel]="selectedClient?.firstName" [readonly]="edit"><br>
+        Lastname: <input [class.edit]="edit" type="text" placeholder=" Smith" name="lastName" #lastName="ngModel"
+          required autocomplete="off" [ngModel]="selectedClient?.lastName" [readonly]="edit"><br>
+        Date of birth: <input [class.edit]="edit" type="text" placeholder=" 1991-12-12" name="dob" #dob="ngModel"
+          required autocomplete="off" [ngModel]="selectedClient?.dob" [readonly]="edit"><br>
+        Phone number: <input [class.edit]="edit" type="text" placeholder=" 0761775637" name="number" #number="ngModel"
+          required autocomplete="off" [ngModel]="selectedClient?.number" [readonly]="edit"><br>
+        Country: <input [class.edit]="edit" type="text" placeholder=" USA" name="country" #country="ngModel" required
+          autocomplete="off" [ngModel]="selectedClient?.country" [readonly]="edit"><br>
+        City: <input [class.edit]="edit" type="text" placeholder=" New York" name="city" #city="ngModel" required
+          autocomplete="off" [ngModel]="selectedClient?.city" [readonly]="edit"><br>
+        Email: <input [class.edit]="edit" type="text" placeholder=" john_smith@gmail.com" name="email" #email="ngModel"
+          required autocomplete="off" [ngModel]="selectedClient?.email" [readonly]="edit"><br>
+        Action: <input [class.edit]="edit" type="text" placeholder=" sale" name="action" #action="ngModel" required
+          autocomplete="off" [ngModel]="selectedClient?.action" [readonly]="edit"><br>
+      </form>
+      <button *ngIf="!edit" (click)="saveSelectedClient(id.value, firstName.value, lastName.value, dob.value, number.value, country.value, city.value, email.value, action.value)" class="update-button">
+        Save
+      </button>
+      <button *ngIf="!edit" (click)="onEdit()" class="update-button">
+          Cancel
+        </button>
+        <div *ngIf="this.edited" id="hideMe" class="succes">Client edited succsesfully<i class="fa fa-check" aria-hidden="true"></i>
+        </div>
+    </div>
+  </div>
+</div>

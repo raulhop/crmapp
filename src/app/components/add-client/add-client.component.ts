@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from '../../models/client.interface';
 import { ClientService } from '../../services/client/client.service';
+import { AccountService } from '../../services/account/account.service';
 
 @Component({
     selector: 'app-add-client',
@@ -12,7 +13,7 @@ export class AddClientComponent implements OnInit {
     public client: Client;
     public added: boolean;
     public already: boolean;
-    constructor(private clientService: ClientService) { }
+    constructor(private clientService: ClientService, private accountService: AccountService) { }
     ngOnInit() {
     }
 
@@ -21,6 +22,7 @@ export class AddClientComponent implements OnInit {
         let date: string = dob.toString();
         console.log(this.clientService.clients);
         let id: number = this.clientService.clients[this.clientService.clients.length - 1].id + 1;
+        let userId: number = this.accountService.loggedInUser.id;
         console.log(id);
         this.client = {
             id: id,
@@ -31,7 +33,8 @@ export class AddClientComponent implements OnInit {
             country: country,
             city: city,
             email: email,
-            action: action
+            action: action,
+            userId: userId
         }
         var keepGoing = true;
         this.clientService.clients.forEach(client => {

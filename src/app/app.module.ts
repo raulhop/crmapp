@@ -16,6 +16,7 @@ import { AddClientComponent } from './components/add-client/add-client.component
 import { AppRoutingModule } from './components/home/app-routing.module';
 import { HttpModule } from '@angular/http';
 import { DeleteClientComponent } from './components/delete-client/delete-client.component';
+import { UpdateClientComponent } from './components/update-client/update-client.component';
 
 const ROUTES: Routes = [
   {
@@ -35,7 +36,8 @@ const ROUTES: Routes = [
     MenuComponent,
     SideMenuComponent,
     AddClientComponent,
-    DeleteClientComponent
+    DeleteClientComponent,
+    UpdateClientComponent
   ],
   imports: [
     BrowserModule,

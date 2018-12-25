@@ -10,14 +10,13 @@ import { ClientService } from 'src/app/services/client/client.service';
 })
 export class HomeComponent {
 
-  
-
-  constructor(private accountService: AccountService, private clientService: ClientService){}
+  constructor(private accountService: AccountService, private clientService: ClientService) { }
   ngOnInit() {
+    this.getClients();
+  }
+  public getClients(): void {
     this.clientService.getClients().subscribe((data: Client[]) => {
-        this.clientService.clients = data;
-        console.log(this.clientService.clients.length);
+      this.clientService.clients = data;
     });
-
-}
+  }
 }

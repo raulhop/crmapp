@@ -33,6 +33,15 @@ export class ClientService {
       map((response: Response) => response.json())
     );
   }
+
+  public updateClient(client : Client): Observable<Client> {
+    return this.http
+    .put(`${API_URL}/clients/${client.id}`, client)
+    .pipe(
+      map((response: Response) => response.json())
+    );
+  }
+
   public deleteClient(client : Client): Observable<Client> {
     return this.http
     .delete(`${API_URL}/clients/${client.id}`)

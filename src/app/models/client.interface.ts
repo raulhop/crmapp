@@ -8,4 +8,5 @@ export interface Client{
     city: string;
     email: string;
     action: string;
+    userId: number;
 }

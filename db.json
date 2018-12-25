@@ -27,11 +27,12 @@
       "firstName": "Raul",
       "lastName": "Hopota",
       "dob": "1996-12-12",
-      "number": "0761774637",
+      "number": "0761775637",
       "country": "Romania",
-      "city": "Timisoara",
+      "city": "Lugoj",
       "email": "raulhopota@yahoo.com",
-      "action": "sale"
+      "action": "rent",
+      "userId": 99
     },
     {
       "id": 2,
@@ -42,18 +43,20 @@
       "country": "Romania",
       "city": "Timisoara",
       "email": "neto@gmail.com",
-      "action": "rent"
+      "action": "rent",
+      "userId": 0
     },
     {
       "id": 3,
-      "firstName": "Gigel",
+      "firstName": "Gigela",
       "lastName": "Ioan",
       "dob": "2018-12-13",
       "number": "16573546575636",
       "country": "Romania",
       "city": "Lugoj",
       "email": "gigi@gmail.com",
-      "action": "sale"
+      "action": "sale",
+      "userId": 99
     },
     {
       "id": 4,
@@ -61,21 +64,23 @@
       "lastName": "Giulan",
       "dob": "1996-02-08",
       "number": "0762226712",
-      "country": "Japonia",
+      "country": "Japoniaa",
       "city": "Tokyo",
       "email": "giuly@yahoo.jp",
-      "action": "sale"
+      "action": "sale",
+      "userId": 0
     },
     {
       "id": 5,
-      "firstName": "Marcel",
+      "firstName": "Marcela",
       "lastName": "Lungu",
       "dob": "2018-12-19",
       "number": "78624567443",
       "country": "Japonia",
       "city": "Tokyo",
-      "email": "mirceanebunu@yahoo.com",
-      "action": "rent"
+      "email": "mircea@yahoo.com",
+      "action": "rent",
+      "userId": 0
     }
   ]
 }
