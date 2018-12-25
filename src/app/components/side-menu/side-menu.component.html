@@ -2,10 +2,10 @@
   <div id="user">
     <i class="fa fa-user fa-3x"></i>
     <div class="user-name">
-      Name
+      {{this.accountService.loggedInUser.firstName}} {{this.accountService.loggedInUser.lastName}}
     </div>
     <div class="user-info">
-      Information
+      {{this.accountService.loggedInUser.email}}
     </div>
   </div>
   <div class="views">

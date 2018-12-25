@@ -22,7 +22,7 @@
       <div class="dropdown show">
         <a class="nav-item nav-link dropdown-toggle" href role="button" id="dropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
-        {{loggedInUser}}
+          {{this.accountService.loggedInUser.firstName}} {{this.accountService.loggedInUser.lastName}}
           <i class="fa fa-user"></i>
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">

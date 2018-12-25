@@ -1,4 +1,26 @@
 {
+  "users": [
+    {
+      "id": 0,
+      "firstName": "Andrei",
+      "lastName": "Netotea",
+      "dob": "1996-12-12",
+      "country": "Romania",
+      "city": "Timisoara",
+      "email": "netoteaandrei@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": 1,
+      "firstName": "Marian",
+      "lastName": "Daniel",
+      "dob": "2018-12-07",
+      "country": "Austria",
+      "city": "Vienna",
+      "email": "marian@gmail.com",
+      "password": "12345"
+    }
+  ],
   "clients": [
     {
       "id": 1,

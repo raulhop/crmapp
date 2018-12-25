@@ -10,7 +10,7 @@ import { ClientService } from 'src/app/services/client/client.service';
 })
 export class HomeComponent {
 
-  public loggedInUser: string = this.accountService.loggedInUser;
+  
 
   constructor(private accountService: AccountService, private clientService: ClientService){}
   ngOnInit() {
