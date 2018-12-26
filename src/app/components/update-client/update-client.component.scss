@@ -29,6 +29,18 @@
   
   font-weight: 500;
   font-size: 15px;
+  .client-info{
+    display: -webkit-inline-box;
+  .client-invalid{
+    max-width: 300px;
+    margin: 0;
+    margin-left: 6px;
+    margin-top: 5px;
+  }
+  .client-invalid{
+    color: #D8000C;
+  }
+}
   .edit{
     border: none;
     outline: none;
@@ -38,13 +50,19 @@
   }
   ::placeholder{
     font-style: italic;
+    color: black;
   }
   input{
     
     font-weight: normal;
     font-size: 13px;
     margin-top: 5px;
+    font-style: italic;
   } 
+
+  input:focus{
+    outline: none;
+  }
   #s-client{
     margin-top: 60px;
     font-size: 19px;
@@ -55,7 +73,7 @@
 }
   .clients-table{
     margin-left: 20px;
-    margin-right: 70px;
+    margin-right: 20px;
     tr#tds{
       font-size: 14px;
       font-weight: 500;

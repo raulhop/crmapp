@@ -32,33 +32,80 @@
         Selected client
       </div>
       <form #form="ngForm" novalidate>
-          Id: <input [class.edit]="edit" type="text" placeholder=" 1" name="id" #id="ngModel"
-          required autocomplete="off" [ngModel]="selectedClient?.id" [readonly]="edit"><br>
-        Firstname: <input [class.edit]="edit" type="text" placeholder=" John" name="firstName" #firstName="ngModel"
-          required autocomplete="off" [ngModel]="selectedClient?.firstName" [readonly]="edit"><br>
-        Lastname: <input [class.edit]="edit" type="text" placeholder=" Smith" name="lastName" #lastName="ngModel"
-          required autocomplete="off" [ngModel]="selectedClient?.lastName" [readonly]="edit"><br>
-        Date of birth: <input [class.edit]="edit" type="text" placeholder=" 1991-12-12" name="dob" #dob="ngModel"
-          required autocomplete="off" [ngModel]="selectedClient?.dob" [readonly]="edit"><br>
-        Phone number: <input [class.edit]="edit" type="text" placeholder=" 0761775637" name="number" #number="ngModel"
-          required autocomplete="off" [ngModel]="selectedClient?.number" [readonly]="edit"><br>
-        Country: <input [class.edit]="edit" type="text" placeholder=" USA" name="country" #country="ngModel" required
-          autocomplete="off" [ngModel]="selectedClient?.country" [readonly]="edit"><br>
-        City: <input [class.edit]="edit" type="text" placeholder=" New York" name="city" #city="ngModel" required
-          autocomplete="off" [ngModel]="selectedClient?.city" [readonly]="edit"><br>
-        Email: <input [class.edit]="edit" type="text" placeholder=" john_smith@gmail.com" name="email" #email="ngModel"
-          required autocomplete="off" [ngModel]="selectedClient?.email" [readonly]="edit"><br>
-        Action: <input [class.edit]="edit" type="text" placeholder=" sale" name="action" #action="ngModel" required
-          autocomplete="off" [ngModel]="selectedClient?.action" [readonly]="edit"><br>
+        <div class="client-info">
+          Firstname: <input [class.edit]="edit" pattern="^[a-zA-Z]+$" type="text" placeholder=" John" name="firstName" #firstName="ngModel"
+            required autocomplete="off" [style.border]="(firstName.errors?.required && firstName.dirty || firstName.errors?.pattern ? '1px solid #D8000C' : '')"
+            [ngModel]="selectedClient?.firstName" [readonly]="edit">
+          <div *ngIf="firstName.errors?.required && firstName.dirty || firstName.errors?.pattern" class="client-invalid">
+            <i class="fa fa-times-circle"></i>
+          </div>
+        </div><br>
+        <div class="client-info">
+          Lastname: <input [class.edit]="edit" pattern="^[a-zA-Z]+$" type="text" placeholder=" Smith" name="lastName" #lastName="ngModel"
+            required autocomplete="off" [style.border]="(lastName.errors?.required && lastName.dirty || lastName.errors?.pattern ? '1px solid #D8000C' : '')"
+            [ngModel]="selectedClient?.lastName" [readonly]="edit">
+          <div *ngIf="lastName.errors?.required && lastName.dirty || lastName.errors?.pattern" class="client-invalid">
+            <i class="fa fa-times-circle"></i>
+          </div>
+        </div><br>
+        <div class="client-info">
+          Date of birth: <input [class.edit]="edit" type="date"  name="dob" #dob="ngModel"
+            required autocomplete="off" [style.border]="(dob.errors?.required && dob.dirty ? '1px solid #D8000C' : '')"
+            [ngModel]="selectedClient?.dob" [readonly]="edit">
+          <div *ngIf="dob.errors?.required && dob.dirty" class="client-invalid">
+            <i class="fa fa-times-circle"></i>
+          </div>
+        </div><br>
+        <div class="client-info">
+          Number: <input [class.edit]="edit" type="text" placeholder=" 0761775637" name="number" #number="ngModel"
+            required autocomplete="off" [style.border]="(number.errors?.required && number.dirty ? '1px solid #D8000C' : '')"
+            [ngModel]="selectedClient?.number" [readonly]="edit">
+          <div *ngIf="number.errors?.required && number.dirty" class="client-invalid">
+            <i class="fa fa-times-circle"></i>
+          </div>
+        </div><br>
+        <div class="client-info">
+          Country: <input [class.edit]="edit" type="text" placeholder=" USA" name="country" #country="ngModel" required
+            autocomplete="off" [style.border]="(country.errors?.required && country.dirty ? '1px solid #D8000C' : '')"
+            [ngModel]="selectedClient?.country" [readonly]="edit">
+          <div *ngIf="country.errors?.required && country.dirty" class="client-invalid">
+            <i class="fa fa-times-circle"></i>
+          </div>
+        </div><br>
+        <div class="client-info">
+          City: <input [class.edit]="edit" type="text" placeholder=" New York" name="city" #city="ngModel" required
+            autocomplete="off" [style.border]="(city.errors?.required && city.dirty ? '1px solid #D8000C' : '')"
+            [ngModel]="selectedClient?.city" [readonly]="edit">
+          <div *ngIf="city.errors?.required && city.dirty" class="client-invalid">
+            <i class="fa fa-times-circle"></i>
+          </div>
+        </div><br>
+        <div class="client-info">
+          Email: <input [class.edit]="edit" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder=" john_smith@gmail.com"
+            name="email" #email="ngModel" required autocomplete="off" [style.border]="(email.errors?.required && email.dirty || email.errors?.pattern ? '1px solid #D8000C' : '')"
+            [ngModel]="selectedClient?.email" [readonly]="edit">
+          <div *ngIf="email.errors?.required && email.dirty || email.errors?.pattern" class="client-invalid">
+            <i class="fa fa-times-circle"></i>
+          </div>
+        </div><br>
+        <div class="client-info">
+          Action: <input [class.edit]="edit" type="text" placeholder=" sale" name="action" #action="ngModel" required
+            autocomplete="off" [style.border]="(action.errors?.required && action.dirty ? '1px solid #D8000C' : '')"
+            [ngModel]="selectedClient?.action" [readonly]="edit">
+          <div *ngIf="action.errors?.required && action.dirty" class="client-invalid">
+            <i class="fa fa-times-circle"></i>
+          </div>
+        </div><br>
       </form>
-      <button *ngIf="!edit" (click)="saveSelectedClient(id.value, firstName.value, lastName.value, dob.value, number.value, country.value, city.value, email.value, action.value)" class="update-button">
+      <button *ngIf="!edit" [disabled]="form.invalid" (click)="saveSelectedClient(firstName?.value, lastName?.value, dob?.value, number?.value, country?.value, city?.value, email?.value, action?.value)"
+        class="update-button">
         Save
       </button>
-      <button *ngIf="!edit" (click)="onEdit()" class="update-button">
-          Cancel
-        </button>
-        <div *ngIf="this.edited" id="hideMe" class="succes">Client edited succsesfully<i class="fa fa-check" aria-hidden="true"></i>
-        </div>
+      <button *ngIf="!edit" [disabled]="form.invalid" (click)="onEdit()" class="update-button">
+        Cancel
+      </button>
+      <div *ngIf="this.edited" id="hideMe" class="succes">Client edited succsesfully<i class="fa fa-check" aria-hidden="true"></i>
+      </div>
     </div>
   </div>
 </div>

@@ -26,7 +26,7 @@
       "id": 1,
       "firstName": "Raul",
       "lastName": "Hopota",
-      "dob": "1996-12-12",
+      "dob": "1996-11-04",
       "number": "0761775637",
       "country": "Romania",
       "city": "Lugoj",
@@ -72,15 +72,15 @@
     },
     {
       "id": 5,
-      "firstName": "Marcela",
+      "firstName": "Mircea",
       "lastName": "Lungu",
-      "dob": "2018-12-19",
-      "number": "78624567443",
-      "country": "Japonia",
-      "city": "Tokyo",
-      "email": "mircea@yahoo.com",
-      "action": "rent",
-      "userId": 0
+      "dob": "1994-12-12",
+      "number": "124435324",
+      "country": "Romania",
+      "city": "Timisoara",
+      "email": "mircea@gmail.com",
+      "action": "sale",
+      "userId": 99
     }
   ]
 }

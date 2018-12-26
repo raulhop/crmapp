@@ -19,12 +19,13 @@ export class UpdateClientComponent{
         this.edit = !this.edit;
     }
 
-    public saveSelectedClient(id, firstName, lastName, dob, number, country, city, email, action){
+    public saveSelectedClient( firstName, lastName, dob, number, country, city, email, action){
+        let date= dob.toString();
         this.selectedClient = {
-            id: id,
+            id: this.selectedClient.id,
             firstName: firstName,
             lastName: lastName,
-            dob: dob,
+            dob: date,
             number: number,
             country: country,
             city: city,
