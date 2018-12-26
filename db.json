@@ -11,7 +11,7 @@
       "password": "12345"
     },
     {
-      "id": 1,
+      "id": 99,
       "firstName": "Marian",
       "lastName": "Daniel",
       "dob": "2018-12-07",
@@ -32,26 +32,26 @@
       "city": "Lugoj",
       "email": "raulhopota@yahoo.com",
       "action": "rent",
-      "userId": 99
+      "userId": 0
     },
     {
       "id": 2,
       "firstName": "Andrei",
       "lastName": "Netotea",
       "dob": "2018-12-07",
-      "number": "1234567890",
+      "number": "0726453847",
       "country": "Romania",
       "city": "Timisoara",
       "email": "neto@gmail.com",
       "action": "rent",
-      "userId": 0
+      "userId": 99
     },
     {
       "id": 3,
       "firstName": "Gigela",
       "lastName": "Ioan",
       "dob": "2018-12-13",
-      "number": "16573546575636",
+      "number": "0762517263",
       "country": "Romania",
       "city": "Lugoj",
       "email": "gigi@gmail.com",
@@ -74,12 +74,72 @@
       "id": 5,
       "firstName": "Mircea",
       "lastName": "Lungu",
-      "dob": "1994-12-12",
-      "number": "124435324",
+      "dob": "1994-12-11",
+      "number": "0741625725",
       "country": "Romania",
       "city": "Timisoara",
       "email": "mircea@gmail.com",
       "action": "sale",
+      "userId": 99
+    },
+    {
+      "id": 6,
+      "firstName": "Gheorghe",
+      "lastName": "Daniel",
+      "dob": "1994-12-11",
+      "number": "0741612125",
+      "country": "Romania",
+      "city": "Timisoara",
+      "email": "dani@gmail.com",
+      "action": "rent",
+      "userId": 99
+    },
+    {
+      "id": 7,
+      "firstName": "Alex",
+      "lastName": "Dica",
+      "dob": "1994-12-11",
+      "number": "0771525623",
+      "country": "Romania",
+      "city": "Timisoara",
+      "email": "dica_dica@gmail.com",
+      "action": "sale",
+      "userId": 99
+    },
+    {
+      "id": 8,
+      "firstName": "Adrian",
+      "lastName": "Manea",
+      "dob": "1994-12-11",
+      "number": "0771525623",
+      "country": "Romania",
+      "city": "Timisoara",
+      "email": "maneaadi@gmail.com",
+      "action": "rent",
+      "userId": 99
+    },
+    {
+      "id": 9,
+      "firstName": "Andrei",
+      "lastName": "Dumbrava",
+      "dob": "1994-12-11",
+      "number": "0771525623",
+      "country": "Romania",
+      "city": "Timisoara",
+      "email": "dumbi_andrei@gmail.com",
+      "action": "sale",
+      "userId": 99
+    },
+    {
+      "id": 10,
+      "firstName": "Gica",
+      "lastName": "Hagi",
+      "dob": "2018-12-06",
+      "number": "0761273627",
+      "country": "Romania",
+      "city": "Constanta",
+      "email": "gica@yahoo.com",
+      "action": "rent",
       "userId": 99
     }
   ]
