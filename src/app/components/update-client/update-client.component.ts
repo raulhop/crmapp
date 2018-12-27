@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { Client } from '../../models/client.interface';
 import { ClientService } from '../../services/client/client.service';
 import { AccountService } from 'src/app/services/account/account.service';
+import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 
 @Component({
     selector: 'app-update-client',
@@ -9,18 +10,33 @@ import { AccountService } from 'src/app/services/account/account.service';
     styleUrls: ['./update-client.component.scss']
 })
 
-export class UpdateClientComponent{
+export class UpdateClientComponent {
     public selectedClient: Client;
     public edit: boolean = true;
     public edited: boolean;
+    displayedColumns: string[] = ['id', 'firstName', 'lastName', 'action'];
+    dataSource = new MatTableDataSource<Client>();
+    @ViewChild(MatPaginator) paginator: MatPaginator;
+    @ViewChild(MatSort) sort: MatSort;
+
+    ngOnInit() {
+        this.getClients();
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+    }
     constructor(private clientService: ClientService, private accountService: AccountService) { }
 
-    public onEdit(){
+    applyFilter(filterValue: string) {
+        this.dataSource.filter = filterValue.trim().toLowerCase();
+    }
+    
+
+    public onEdit() {
         this.edit = !this.edit;
     }
 
-    public saveSelectedClient( firstName, lastName, dob, number, country, city, email, action){
-        let date= dob.toString();
+    public saveSelectedClient(firstName, lastName, dob, number, country, city, email, action) {
+        let date = dob.toString();
         this.selectedClient = {
             id: this.selectedClient.id,
             firstName: firstName,
@@ -33,24 +49,37 @@ export class UpdateClientComponent{
             action: action,
             userId: this.accountService.loggedInUser.id
         };
+        
         this.onSave();
     }
 
-    public onSave(){
+    public onSave() {
         this.edited = false;
         this.clientService.updateClient(this.selectedClient).subscribe((data: Client) => {
-            this.clientService.clients = this.clientService.clients.map((client: Client) =>{
-                if(client.id == this.selectedClient.id){
+            this.clientService.clients = this.clientService.clients.map((client: Client) => {
+                if (client.id == this.selectedClient.id) {
                     client = Object.assign({}, client, this.selectedClient);
+                    this.getClients();
                 }
                 return client;
             })
         });
+        
         this.edit = !this.edit;
         this.edited = true;
     }
+
+    public getClients(): void {
+        this.clientService.getClients().subscribe((data: Client[]) => {
+          this.clientService.clients = data;
+          this.dataSource.data= data;
+        });
+        
+      }
     
-    public onSelect(client: Client){
-        this.selectedClient= client;
+
+    public onSelect(client: Client) {
+        this.selectedClient = client;
+       
     }
 }

@@ -17,6 +17,9 @@ import { AppRoutingModule } from './components/home/app-routing.module';
 import { HttpModule } from '@angular/http';
 import { DeleteClientComponent } from './components/delete-client/delete-client.component';
 import { UpdateClientComponent } from './components/update-client/update-client.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+
 
 const ROUTES: Routes = [
   {
@@ -38,11 +41,14 @@ const ROUTES: Routes = [
     AddClientComponent,
     DeleteClientComponent,
     UpdateClientComponent
+   
   ],
   imports: [
     BrowserModule,
     AppBootstrapModule,
     FormsModule,
+    MaterialModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     HttpModule,

@@ -22,11 +22,30 @@
     .client-list{
       margin-left: 20px;
       margin-top: 40px;
-      .clients-table{
-        tr#tds{
-          font-size: 14px;
-          font-weight: 500;
-        }
+      table {
+        width: 100%;
+      }
+      .mat-form-field {
+        font-size: 12px;
+        width: 100%;
+      }
+      .mat-cell{
+        font-size: unset;
+        color: unset;
+      }
+      .mat-header-cell{
+        font-size: 14px;
+        font-weight: bold;
+        color: #3b444b;
+      }
+      th.mat-sort-header-sorted {
+        color: black;
+      }
+      margin-left: 20px;
+      margin-right: 20px;
+      tr#tds{
+        font-size: 13px;
+        font-weight: normal;
       }
       .error {
         font-size: 14px;

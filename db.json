@@ -26,13 +26,13 @@
       "id": 1,
       "firstName": "Raul",
       "lastName": "Hopota",
-      "dob": "1996-11-04",
+      "dob": "1996-10-04",
       "number": "0761775637",
       "country": "Romania",
       "city": "Lugoj",
       "email": "raulhopota@yahoo.com",
-      "action": "rent",
-      "userId": 0
+      "action": "sale",
+      "userId": 99
     },
     {
       "id": 2,
@@ -48,7 +48,7 @@
     },
     {
       "id": 3,
-      "firstName": "Gigela",
+      "firstName": "Gigel",
       "lastName": "Ioan",
       "dob": "2018-12-13",
       "number": "0762517263",
@@ -61,25 +61,25 @@
     {
       "id": 4,
       "firstName": "Vasile",
-      "lastName": "Giulan",
+      "lastName": "Giulana",
       "dob": "1996-02-08",
       "number": "0762226712",
-      "country": "Japoniaa",
+      "country": "Japonia",
       "city": "Tokyo",
       "email": "giuly@yahoo.jp",
       "action": "sale",
-      "userId": 0
+      "userId": 99
     },
     {
       "id": 5,
-      "firstName": "Mircea",
+      "firstName": "Mirceaa",
       "lastName": "Lungu",
       "dob": "1994-12-11",
       "number": "0741625725",
       "country": "Romania",
       "city": "Timisoara",
       "email": "mircea@gmail.com",
-      "action": "sale",
+      "action": "rent",
       "userId": 99
     },
     {
@@ -103,14 +103,14 @@
       "country": "Romania",
       "city": "Timisoara",
       "email": "dica_dica@gmail.com",
-      "action": "sale",
+      "action": "rent",
       "userId": 99
     },
     {
       "id": 8,
       "firstName": "Adrian",
       "lastName": "Manea",
-      "dob": "1994-12-11",
+      "dob": "1994-01-11",
       "number": "0771525623",
       "country": "Romania",
       "city": "Timisoara",
@@ -127,19 +127,19 @@
       "country": "Romania",
       "city": "Timisoara",
       "email": "dumbi_andrei@gmail.com",
-      "action": "sale",
+      "action": "rent",
       "userId": 99
     },
     {
       "id": 10,
-      "firstName": "Gica",
-      "lastName": "Hagi",
-      "dob": "2018-12-06",
-      "number": "0761273627",
+      "firstName": "Adrian",
+      "lastName": "Mutu",
+      "dob": "2018-12-10",
+      "number": "0731357354",
       "country": "Romania",
-      "city": "Constanta",
-      "email": "gica@yahoo.com",
-      "action": "rent",
+      "city": "Cluj",
+      "email": "mutu_adi@yahoo.com",
+      "action": "sale",
       "userId": 99
     }
   ]

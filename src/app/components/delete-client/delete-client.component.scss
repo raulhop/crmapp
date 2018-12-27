@@ -26,20 +26,43 @@
     font-style: italic;
   }
   .clients-table{
+    margin-top: 25px;
     margin-left: 20px;
     margin-right: 170px;
-    tr#tds{
+    table {
+      width: 100%;
+    }
+    .mat-form-field {
+      font-size: 12px;
+      width: 100%;
+    }
+    .mat-cell{
+      font-size: unset;
+      color: unset;
+    }
+    .mat-header-cell{
       font-size: 14px;
-      font-weight: 500;
+      font-weight: bold;
+      color: #3b444b;
+    }
+    th.mat-sort-header-sorted {
+      color: black;
+    }
+    margin-left: 20px;
+    margin-right: 20px;
+    tr#tds{
+      font-size: 13px;
+      font-weight: normal;
     }
     tr#tds:hover{
-      font-size: 14px;
-      color: #87CEFA;
+      font-size: 13px;
       cursor: pointer;
     }
     .selected {
-      font-size: 14px;
-      color: #87CEFA;
+      font-size: 13px;
+      background-color: #B22222;
+      font-style: italic;
+      opacity: 0.8;
     }
   }
   .delete-button{
@@ -63,6 +86,7 @@
         .succes{
         color: #3CB371;
         font-weight: bold;
+        font-size: 13px;
         #refresh{
           color: black;
           font-weight: bold;
