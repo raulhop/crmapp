@@ -64,7 +64,7 @@
     outline: none;
   }
   #s-client{
-    margin-top: 60px;
+    margin-top: 100px;
     font-size: 19px;
     font-weight: bold;
     color: #3b444b;
@@ -83,6 +83,7 @@
     .mat-cell{
       font-size: unset;
       color: unset;
+      font-weight: unset;
     }
     .mat-header-cell{
       font-size: 14px;
@@ -107,6 +108,7 @@
       background-color: #388E8E;
       font-style: italic;
       opacity: 0.8;
+      font-weight: bold;
     }
   }
   .update-button{

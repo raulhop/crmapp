@@ -1,6 +1,6 @@
 <div class="add-client-container">
   <div class="add-client-title">
-    <div id="new-client">Add new client</div>
+    <div id="new-client">Add client</div>
   </div>
   <div class="add-client-content row">
     <div class="client-list col-md">
@@ -39,26 +39,29 @@
         </table>
         <mat-paginator [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
       <div *ngIf="this.added" id="hideMe" class="succes">Client added succsesfully<i class="fa fa-check" aria-hidden="true"></i>
-        <div id="refresh">
-          Refresh page to see the change in the table!
-        </div>
       </div>
-      <div *ngIf="this.already" class="error">Client already exist!</div>
+      <div *ngIf="this.already" id="hideMe" class="error">Client already exist!</div>
     </div>
     <div class="client-form col-md">
       <form #form="ngForm" novalidate>
         <div>
           <div class="input-title">First name</div>
-          <input type="text" name="firstName" #firstName="ngModel" required placeholder="" autocomplete="off" ngModel>
+          <input type="text" name="firstName" pattern="^[a-zA-Z]+$" #firstName="ngModel" required placeholder="" autocomplete="off" ngModel>
           <div *ngIf="firstName.errors?.required && firstName.dirty" class="error">
             *First name is required
+          </div>
+          <div *ngIf="firstName.errors?.pattern" class="error">
+            *Only letters allowed
           </div>
         </div>
         <div>
           <div class="input-title">Last name</div>
-          <input type="text" name="lastName" #lastName="ngModel" required placeholder="" autocomplete="off" ngModel>
+          <input type="text" name="lastName"  pattern="^[a-zA-Z]+$" #lastName="ngModel" required placeholder="" autocomplete="off" ngModel>
           <div *ngIf="lastName.errors?.required && lastName.dirty" class="error">
             *Last name is required
+          </div>
+          <div *ngIf="lastName.errors?.pattern" class="error">
+            *Only letters allowed
           </div>
         </div>
         <div>
@@ -71,23 +74,32 @@
         </div>
         <div>
           <div class="input-title">Phone number</div>
-          <input type="text" name="number" #number="ngModel" required placeholder="" autocomplete="off" ngModel>
+          <input type="text" pattern="^(\+4|)?(07[0-8]{1}[0-9]{1}|02[0-9]{2}|03[0-9]{2}){1}?(\s|\.|\-)?([0-9]{3}(\s|\.|\-|)){2}$" name="number" #number="ngModel" required placeholder="" autocomplete="off" ngModel>
           <div *ngIf="number.errors?.required && number.dirty" class="error">
             *Number is required
+          </div>
+          <div *ngIf="number.errors?.pattern" class="error">
+            *Number format incorect
           </div>
         </div>
         <div>
           <div class="input-title">Country</div>
-          <input type="text" name="country" #country="ngModel" required placeholder="" autocomplete="off" ngModel>
+          <input type="text" pattern="^[a-zA-Z]+$" name="country" #country="ngModel" required placeholder="" autocomplete="off" ngModel>
           <div *ngIf="country.errors?.required && country.dirty" class="error">
             *City is required
+          </div>
+          <div *ngIf="country.errors?.pattern" class="error">
+            *Only letters allowed
           </div>
         </div>
         <div>
           <div class="input-title">City</div>
-          <input type="text" name="city" #city="ngModel" required placeholder="" autocomplete="off" ngModel>
+          <input type="text" pattern="^[a-zA-Z]+$" name="city" #city="ngModel" required placeholder="" autocomplete="off" ngModel>
           <div *ngIf="city.errors?.required && city.dirty" class="error">
             *City is required
+          </div>
+          <div *ngIf="city.errors?.pattern" class="error">
+            *Only letters allowed
           </div>
         </div>
         <div>
@@ -103,12 +115,15 @@
         </div>
         <div>
           <div class="input-title">Action</div>
-          <select #action="ngModel" name="action" ngModel required>
+          <select #action="ngModel" pattern="(?:sale|rent)" name="action" ngModel required>
             <option value="sale">Sale</option>
             <option value="rent">Rent</option>
           </select>
           <div *ngIf="action.errors?.required && action.dirty" class="error">
             *An action value is required
+          </div>
+          <div *ngIf="action.errors?.pattern" class="error">
+            *Action can be only 'sale'/'rent' 
           </div>
         </div>
         <button type="submit" class="add-button" (click)="addClient(firstName.value, lastName.value, dob.value, number.value, country.value, city.value, email.value, action.value)"

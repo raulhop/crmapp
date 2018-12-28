@@ -29,13 +29,14 @@ export class UpdateClientComponent {
     applyFilter(filterValue: string) {
         this.dataSource.filter = filterValue.trim().toLowerCase();
     }
-    
+
 
     public onEdit() {
         this.edit = !this.edit;
     }
 
     public saveSelectedClient(firstName, lastName, dob, number, country, city, email, action) {
+        this.edited = false;
         let date = dob.toString();
         this.selectedClient = {
             id: this.selectedClient.id,
@@ -49,7 +50,7 @@ export class UpdateClientComponent {
             action: action,
             userId: this.accountService.loggedInUser.id
         };
-        
+
         this.onSave();
     }
 
@@ -64,22 +65,22 @@ export class UpdateClientComponent {
                 return client;
             })
         });
-        
+
         this.edit = !this.edit;
         this.edited = true;
     }
 
     public getClients(): void {
         this.clientService.getClients().subscribe((data: Client[]) => {
-          this.clientService.clients = data;
-          this.dataSource.data= data;
+            this.clientService.clients = data;
+            this.dataSource.data = data;
         });
-        
-      }
-    
+
+    }
+
 
     public onSelect(client: Client) {
         this.selectedClient = client;
-       
+
     }
 }

@@ -48,7 +48,7 @@
     },
     {
       "id": 3,
-      "firstName": "Gigel",
+      "firstName": "Gigela",
       "lastName": "Ioan",
       "dob": "2018-12-13",
       "number": "0762517263",
@@ -61,18 +61,18 @@
     {
       "id": 4,
       "firstName": "Vasile",
-      "lastName": "Giulana",
+      "lastName": "Giulan",
       "dob": "1996-02-08",
       "number": "0762226712",
       "country": "Japonia",
       "city": "Tokyo",
       "email": "giuly@yahoo.jp",
-      "action": "sale",
+      "action": "rent",
       "userId": 99
     },
     {
       "id": 5,
-      "firstName": "Mirceaa",
+      "firstName": "Mircea",
       "lastName": "Lungu",
       "dob": "1994-12-11",
       "number": "0741625725",
@@ -80,7 +80,7 @@
       "city": "Timisoara",
       "email": "mircea@gmail.com",
       "action": "rent",
-      "userId": 99
+      "userId": 0
     },
     {
       "id": 6,

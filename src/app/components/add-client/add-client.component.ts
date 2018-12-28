@@ -60,7 +60,6 @@ export class AddClientComponent implements OnInit {
                 if ((client.firstName == this.client.firstName) && (client.lastName == this.client.lastName)) {
                     this.already = true;
                     keepGoing = false;
-                    console.log(client.firstName, this.client.firstName, client.lastName, this.client.lastName);
                 }
                 else {
                     this.already = false;

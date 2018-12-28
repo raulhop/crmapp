@@ -98,14 +98,145 @@ button:hover {
       color: white;
     }
 
-    .dropdown-menu {
+    #not {
+      background-color: #DCDCDC;
+      width: 80px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      max-height: 150px;
 
+      hr {
+        margin: 0;
+      }
+
+      .notification {
+        border: none;
+        color: black;
+        max-width: 150px;
+
+        .excl {
+          font-size: 8px;
+          max-width: 16px;
+          padding: 0;
+          margin-left: 15px;
+          margin-top: 2px;
+        }
+
+        .notif {
+          padding: 0;
+          max-width: 90%;
+          font-size: 10px;
+        }
+      }
+      .notification:hover{
+        cursor: pointer;
+        opacity: 0.6;
+      }
+    }
+
+    #msg {
+      background-color: #DCDCDC;
+      width: 130px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      max-height: 170px;
+
+      hr {
+        margin: 0;
+      }
+
+      .message {
+        border: none;
+        color: black;
+        padding-left: 20px;
+
+        .user {
+          .user-left {
+            padding: 0;
+            max-width: 20px;
+            font-size: 30px;
+          }
+
+          .user-right {
+            padding: 0;
+
+            .user-name {
+              font-size: 12px;
+              font-weight: bold;
+              margin-left: 20px;
+              margin-right: 0;
+              max-width: 50%;
+            }
+
+            .user-message {
+              font-size: 10px;
+              max-width: 80%;
+              margin-left: 5px;
+              line-height: 0.9;
+            }
+
+            .user-time {
+              background-color: #3b444b;
+              max-width: 60px;
+              font-size: 8px;
+              border-radius: 3px;
+              color: #DCDCDC;
+              margin-left: 5px;
+              margin-top: 3px;
+              margin-bottom: 3px;
+            }
+          }
+        }
+      }
+
+      .message:hover {
+        cursor: pointer;
+        background-color: #DCDCDC;
+        opacity: 0.6;
+      }
+    }
+
+    .dropdown-menu-right {
       a {
         color: black;
       }
 
       a:hover {
         color: white;
+      }
+
+    }
+
+    .btn-group {
+
+      .notification-text {
+        color: #87CEFA;
+        margin-top: 7px;
+        font-size: 10px;
+      }
+
+      /* width */
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      .dropdown-toggle::after {
+        display: none;
       }
     }
 
