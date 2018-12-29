@@ -1,0 +1,79 @@
+<div class="dashboard-container">
+  <div class="dashboard-title">
+    <div id="dashboard-title">Dashboard</div>
+  </div>
+  <div class="top-dashboard row">
+    <div class="top-dashboard-block col-md clients">
+      <div class="top-block row">
+        <div class="block-icon col-sm"><i class="fa fa-user-circle"></i></div>
+        <div class="block-title col-sm">Clients</div>
+      </div>
+      <div class="block-button">
+        <div class="details">
+          Details
+          <i class="fa fa-arrow-circle-right"></i>
+        </div>
+      </div>
+    </div>
+    <div class="top-dashboard-block col-md tasks">
+      <div class="top-block row">
+        <div class="block-icon col-sm"><i class="fa fa-file-text"></i></div>
+        <div class="block-title col-sm">Tasks</div>
+      </div>
+      <div class="block-button">
+        <div class="details">
+          Details
+          <i class="fa fa-arrow-circle-right"></i>
+        </div>
+      </div>
+    </div>
+    <div class="top-dashboard-block col-md sales">
+      <div class="top-block row">
+        <div class="block-icon col-sm"><i class="fa fa-dollar"></i></div>
+        <div class="block-title col-sm">Sales</div>
+      </div>
+      <div class="block-button">
+        <div class="details">
+          Details
+          <i class="fa fa-arrow-circle-right"></i>
+        </div>
+      </div>
+    </div>
+    <div class="top-dashboard-block col-md rents">
+      <div class="top-block row">
+        <div class="block-icon col-sm"><i class="fa fa-home"></i></div>
+        <div class="block-title col-sm">Rents</div>
+      </div>
+      <div class="block-button">
+        <div class="details">
+          Details
+          <i class="fa fa-arrow-circle-right"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="middle-dashboard row">
+    <div class="pie-ch">
+      <canvas id="pieChart"></canvas>
+      <script>
+        //pie
+        var ctxP = document.getElementById("pieChart").getContext('2d');
+        var myPieChart = new Chart(ctxP, {
+          type: 'pie',
+          data: {
+            labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+            datasets: [{
+              data: [300, 50, 100, 40, 120],
+              backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+              hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+            }]
+          },
+          options: {
+            responsive: true
+          }
+        });
+
+      </script>
+    </div>
+  </div>
+</div>

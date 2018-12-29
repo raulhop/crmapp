@@ -19,13 +19,13 @@ import { DeleteClientComponent } from './components/delete-client/delete-client.
 import { UpdateClientComponent } from './components/update-client/update-client.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
-
+import { DashboardComponent } from './components/dashboard/dashboard.component'
 
 const ROUTES: Routes = [
   {
-      path: '',
-      redirectTo: 'home',
-      pathMatch: 'full'
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
   }
 ];
 
@@ -40,8 +40,8 @@ const ROUTES: Routes = [
     SideMenuComponent,
     AddClientComponent,
     DeleteClientComponent,
-    UpdateClientComponent
-   
+    UpdateClientComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

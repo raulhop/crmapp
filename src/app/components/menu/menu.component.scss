@@ -99,7 +99,7 @@ button:hover {
     }
 
     #not {
-      background-color: #DCDCDC;
+      background-color: white;
       width: 80px;
       overflow-y: scroll;
       overflow-x: hidden;
@@ -113,7 +113,8 @@ button:hover {
         border: none;
         color: black;
         max-width: 150px;
-
+        margin-right: 0px;
+        margin-left: 3px;
         .excl {
           font-size: 8px;
           max-width: 16px;
@@ -130,12 +131,13 @@ button:hover {
       }
       .notification:hover{
         cursor: pointer;
-        opacity: 0.6;
+        background-color: #DCDCDC;
+        border-radius: 5px;
       }
     }
 
     #msg {
-      background-color: #DCDCDC;
+      background-color: white;
       width: 130px;
       overflow-y: scroll;
       overflow-x: hidden;
@@ -192,7 +194,7 @@ button:hover {
       .message:hover {
         cursor: pointer;
         background-color: #DCDCDC;
-        opacity: 0.6;
+        border-radius: 3px;
       }
     }
 
