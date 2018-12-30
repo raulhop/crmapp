@@ -21,7 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component'
 import { ChartsModule } from 'ng2-charts';
-
+import { FooterComponent } from './components/footer/footer.component'
 const ROUTES: Routes = [
   {
     path: '',
@@ -42,7 +42,8 @@ const ROUTES: Routes = [
     AddClientComponent,
     DeleteClientComponent,
     UpdateClientComponent,
-    DashboardComponent
+    DashboardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

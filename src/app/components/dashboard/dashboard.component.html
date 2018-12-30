@@ -121,14 +121,107 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6">s</div>
-    <!-- <div style="display: block">
-          <canvas baseChart
-                  [data]="pieChartData"
-                  [labels]="pieChartLabels"
-                  [chartType]="pieChartType"
-                  (chartHover)="chartHovered($event)"
-                  (chartClick)="chartClicked($event)"></canvas>
-        </div>-->
+    <div class="activities-panel col-md-6">
+      <div class="activities-title">Recent activities</div>
+      <div class="activities-headers row">
+        <div class="col-sm">Action</div>
+        <div class="col-sm">User</div>
+      </div>
+      <div class="activities">
+        <hr>
+        <div class="activity row">
+          <div class="activity-action col-sm">
+            <i class="fa fa-circle"></i>
+            Rented a property in Timisoara
+          </div>
+          <div class="activity-user col-sm">
+            Mircea Geoana
+          </div>
+        </div>
+        <hr>
+        <div class="activity row">
+          <div class="activity-action col-sm">
+            <i class="fa fa-circle"></i>
+            Sold a property in Timisoara
+          </div>
+          <div class="activity-user col-sm">
+            Vasile Giulan
+          </div>
+        </div>
+        <hr>
+        <div class="activity row">
+          <div class="activity-action col-sm">
+            <i class="fa fa-circle"></i>
+            Updated a client
+          </div>
+          <div class="activity-user col-sm">
+            Andrei Netotea
+          </div>
+        </div>
+        <hr>
+        <div class="activity row">
+          <div class="activity-action col-sm">
+            <i class="fa fa-circle"></i>
+            Deleted a client
+          </div>
+          <div class="activity-user col-sm">
+            Daniel Lungu
+          </div>
+        </div>
+        <hr>
+        <div class="activity row">
+          <div class="activity-action col-sm">
+            <i class="fa fa-circle"></i>
+            Cancelled a meeting
+          </div>
+          <div class="activity-user col-sm">
+            Raul Hopota
+          </div>
+        </div>
+        <hr>
+        <div class="activity row" id="last">
+          <div class="activity-action col-sm">
+            <i class="fa fa-circle"></i>
+            Rented a property in Cluj
+          </div>
+          <div class="activity-user col-sm">
+            Maria Damb
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-dashboard row">
+
+    <div class="action-pie col-md-6">
+      <div class="pie-title">
+        Actions today
+      </div>
+      <div class="pie-chart" style="display: block">
+        <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+    <div class="action-bar col-md-6">
+      <div class="bar-title">Weekly earnings and expenses</div>
+      <div>
+        <div style="display: block">
+          <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+            [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="action-line col-md">
+      <div class="line-title">
+        Yearly growth
+      </div>
+
+      <div style="display: block;">
+        <canvas baseChart width="700" height="250" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+          [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
   </div>
 </div>

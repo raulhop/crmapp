@@ -18,83 +18,83 @@
     </div>
     <div class="navbar-nav ml-auto">
       <div class="btn-group">
-        <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+        <a class="nav-item nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
             class="fa fa-bell fa-stack"></i></a>
-            <strong class="fa-stack-1x notification-text">4</strong>
+            <strong *ngIf="notified" class="fa-stack-1x notification-text">4</strong>
         <div class="dropdown-menu dropdown-menu-right" id="not">
-          <div class="notification row">
+          <div class="notification row" (click)="notify()">
             <div class="excl col-sm"><i class="fa fa-circle"></i></div>
             <div class="notif col-sm">Mircea deleted his account</div>
           </div>
           <hr>
-          <div class="notification row">
+          <div class="notification row" (click)="notify()">
             <div class="excl col-sm-6"><i class="fa fa-circle"></i></div>
             <div class="notif col-sm-6">Mihai added a new order</div>
           </div>
           <hr>
-          <div class="notification row">
+          <div class="notification row" (click)="notify()">
             <div class="excl col-sm-6"><i class="fa fa-circle"></i></div>
             <div class="notif col-sm-6">Andrei canceled a meeting</div>
           </div>
           <hr>
-          <div class="notification row">
+          <div class="notification row" (click)="notify()">
             <div class="excl col-sm-6"><i class="fa fa-circle"></i></div>
             <div class="notif col-sm-6">George sent you an email</div>
           </div>
         </div>
       </div>
       <div class="btn-group">
-        <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+        <a class="nav-item nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
             class="fa fa-envelope fa-stack"></i></a>
-            <strong class="fa-stack-1x notification-text">5</strong>
+            <strong *ngIf="messaged" class="fa-stack-1x notification-text">5</strong>
         <div class="dropdown-menu dropdown-menu-right" id="msg">
-          <div class="message">
+          <div class="message" (click)="message()">
             <div class="user row">
               <div class="user-left col-sm">
                 <i class="fa fa-user"></i>
               </div>
               <div class="user-right col-sm">
                 <div class="user-name">Marcel</div>
-                <div class="user-message">Lorem ipsum dolor sit amet...</div>
+                <div class="user-message">Buna ziua, doresc sa schimb ...</div>
                 <div class="user-time">3 hours ago</div>
               </div>
             </div>
           </div>
           <hr>
-          <div class="message">
+          <div class="message" (click)="message()">
             <div class="user row">
               <div class="user-left col-sm">
                 <i class="fa fa-user"></i>
               </div>
               <div class="user-right col-sm">
                 <div class="user-name">Ioana</div>
-                <div class="user-message">Lorem ipsum dolor sit amet...</div>
+                <div class="user-message">Nu pot ajunge la intalnirea de astazi.</div>
                 <div class="user-time">12th DEC 14:53</div>
               </div>
             </div>
           </div>
           <hr>
-          <div class="message">
+          <div class="message" (click)="message()">
             <div class="user row">
               <div class="user-left col-sm">
                 <i class="fa fa-user"></i>
               </div>
               <div class="user-right col-sm">
                 <div class="user-name">Andrei</div>
-                <div class="user-message">Lorem ipsum dolor sit amet...</div>
+                <div class="user-message">Buna seara, suna-ma de urgenta.</div>
                 <div class="user-time">2 days ago</div>
               </div>
             </div>
           </div>
           <hr>
-          <div class="message">
+          <div class="message" (click)="message()">
             <div class="user row">
               <div class="user-left col-sm">
                 <i class="fa fa-user"></i>
               </div>
               <div class="user-right col-sm">
                 <div class="user-name">Sebastian</div>
-                <div class="user-message">Lorem ipsum dolor sit amet...</div>
+                <div class="user-message">Buna ziua, as dori sa cumpar...</div>
                 <div class="user-time">15 hours ago</div>
               </div>
             </div>

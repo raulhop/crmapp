@@ -7,8 +7,9 @@
   .dashboard-title {
     border-bottom: 1px solid #C0C0C0;
     height: 50px;
-    background-color: #3b444b;     
+    background-color: #3b444b;
     box-shadow: 3px 3px 5px #dbdee0;
+
     #dashboard-title {
       font-weight: bold;
       margin-left: 20px;
@@ -27,14 +28,14 @@
     .top-dashboard-block {
       color: #dbdee0;
       margin-top: 30px;
-      max-width: 200px;
-      max-height: 150px;
-      margin-left: 76px;
+      max-width: 226px;
+      max-height: 180px;
+      margin-left: 50px;
       border-radius: 5px;
       padding: 0;
 
       .top-block {
-        height: 85px;
+        height: 100px;
 
         .block-icon {
           font-size: 50px;
@@ -54,7 +55,7 @@
       .block-button {
         border-top: 1px solid #dbdee0;
         padding: 0;
-        max-width: 200px;
+        max-width: 226px;
 
         .details {
           margin-left: 130px;
@@ -85,6 +86,7 @@
 
     .sales {
       background-color: #CD5C5C;
+      margin-left: 70px;
     }
 
     .rents {
@@ -94,23 +96,93 @@
 
   .middle-dashboard {
     height: 50%;
-    
-    .event-panel {
-      height: 80%;
+
+    .activities-panel {
+
       background-color: white;
       margin-left: 50px;
       margin-right: 20px;
       padding: 0;
       margin-top: 50px;
-      max-width: 400px;
+      max-width: 43%;
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+
+      .activities-title {
+        height: 45px;
+        padding: 0;
+        padding-left: 30px;
+        padding-top: 10px;
+        font-size: 17px;
+        font-weight: 500;
+        background-color: #e8f1f3;
+        border-bottom: 1px solid #b7b9bf;
+      }
+
+      .activities-headers {
+        margin-top: 3%;
+        color: #5F9EA0;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .activities {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        #last {
+          height: 60px;
+        }
+
+        .activity {
+          margin-top: 5px;
+
+          .activity-action {
+
+            font-size: 14px;
+
+            i {
+              font-size: 10px;
+              color: #3b444b;
+            }
+          }
+
+          .activity-user {
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+          }
+
+          .activity-user:hover {
+            cursor: pointer;
+            color: #5F9EA0;
+          }
+        }
+      }
+
+      hr {
+        margin: 0;
+        margin-top: 5px;
+        border-color: #b7b9bf;
+      }
+
+    }
+
+    .event-panel {
+      max-height: 80%;
+      background-color: white;
+      margin-left: 50px;
+      margin-right: 20px;
+      padding: 0;
+      margin-top: 50px;
+      max-width: 43%;
       box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
 
       .events-title {
 
-        height: 15%;
+        height: 45px;
         padding: 0;
         padding-left: 30px;
-        padding-top: 3px;
+        padding-top: 10px;
         font-size: 17px;
         font-weight: 500;
         background-color: #e8f1f3;
@@ -120,10 +192,12 @@
       .events {
         padding-left: 15px;
         padding-right: 15px;
-        hr{
+
+        hr {
           margin: 0;
           border-color: #b7b9bf;
         }
+
         .event {
           margin-left: 10px;
           margin-top: 5px;
@@ -133,6 +207,7 @@
             max-width: 30px;
             padding: 0;
             text-align: center;
+
             .event-day {
               font-size: 12px;
               margin: 0;
@@ -140,6 +215,7 @@
               background-color: #e8f1f3;
               border: 1px solid #b7b9bf;
             }
+
             .event-month {
               font-size: 11px;
               margin: 0;
@@ -148,25 +224,32 @@
               color: white;
             }
           }
-          .event-info{
-            height: 45px;
+
+          .event-info {
+            
             max-width: 250px;
-            .event-name{
+
+            .event-name {
               font-size: 15px;
               font-weight: 600;
             }
-            .event-name:hover{
+
+            .event-name:hover {
               cursor: pointer;
             }
-            .event-detail{
+
+            .event-detail {
               font-size: 14px;
             }
           }
-          .event-type{
+
+          .event-type {
             max-width: 50px;
             padding: 0;
             margin-top: 10px;
-            .type{
+            margin-left: 20%;
+
+            .type {
               width: 50px;
               text-align: center;
               font-weight: bold;
@@ -178,6 +261,75 @@
           }
         }
       }
+    }
+  }
+
+  .bottom-dashboard {
+    height: 50%;
+    
+    .action-pie {
+      background-color: white;
+      margin-left: 50px;
+      margin-right: 20px;
+      padding: 0;
+      margin-top: 50px;
+      max-width: 36%;
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+      .pie-chart{
+        margin-top: 20px;
+      }
+      .pie-title {
+        height: 45px;
+        padding: 0;
+        padding-left: 30px;
+        padding-top: 10px;
+        font-size: 17px;
+        font-weight: 500;
+        background-color: #e8f1f3;
+        border-bottom: 1px solid #b7b9bf;
+      }
+    }
+    .action-bar {
+      background-color: white;
+      margin-left: 50px;
+      margin-right: 20px;
+      padding: 0;
+      margin-top: 50px;
+      max-width: 100%;
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+
+      .bar-title {
+        height: 45px;
+        padding: 0;
+        padding-left: 30px;
+        padding-top: 10px;
+        font-size: 17px;
+        font-weight: 500;
+        background-color: #e8f1f3;
+        border-bottom: 1px solid #b7b9bf;
+      }
+    }
+    .action-line{
+      background-color: white;
+      margin-left: 50px;
+      margin-right: 20px;
+      padding: 0;
+      margin-top: 50px;
+      max-width: 90%;
+      
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+
+      .line-title {
+        height: 45px;
+        padding: 0;
+        padding-left: 30px;
+        padding-top: 10px;
+        font-size: 17px;
+        font-weight: 500;
+        background-color: #e8f1f3;
+        border-bottom: 1px solid #b7b9bf;
+      }
+
     }
   }
 }
