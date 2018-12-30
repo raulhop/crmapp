@@ -1,8 +1,9 @@
-.update-client-container{
+.update-client-container {
   overflow-x: hidden;
   height: 100%;
   min-height: 583px;
   background-color: white;
+
   .update-client-title {
     border-bottom: 1px solid #C0C0C0;
     height: 50px;
@@ -17,7 +18,10 @@
       color: #dbdee0;
     }
   }
-  #select{
+  .selected-form{
+    width: 300px;
+  }
+  #select {
     font-weight: bold;
     font-size: 14px;
     margin-top: 60px;
@@ -26,84 +30,117 @@
     color: #3b444b;
     font-style: italic;
   }
-.edit-client{
-  margin-top: 10px;
-  font-weight: 500;
-  font-size: 15px;
-  .client-info{
-    display: -webkit-inline-box;
-  .client-invalid{
-    max-width: 300px;
-    margin: 0;
-    margin-left: 6px;
-    margin-top: 5px;
-  }
-  .client-invalid{
-    color: #D8000C;
-  }
-}
-  .edit{
-    border: none;
-    outline: none;
-    padding: 1px 0px;
-    margin: 2px;
-    margin-top: 7px;
-  }
-  ::placeholder{
-    font-style: italic;
-    color: black;
-  }
-  input{
-    
-    font-weight: normal;
-    font-size: 13px;
-    margin-top: 5px;
-    font-style: italic;
-  } 
 
-  input:focus{
-    outline: none;
+  .edit-client {
+    hr{
+      margin: 0;
+    }
+    margin-left: 20px;
+    margin-top: 70px;
+    font-weight: 500;
+    font-size: 15px;
+    max-width: 300px;
+    max-height: 380px;
+    padding: 0;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+    .client-info {
+      display: -webkit-inline-box;
+      margin-left: 20px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      .client-invalid {
+        max-width: 300px;
+        margin: 0;
+        margin-left: 6px;
+        margin-top: 5px;
+      }
+
+      .client-invalid {
+        color: #D8000C;
+      }
+    }
+
+    .edit {
+      border: none;
+      outline: none;
+      padding: 1px 0px;
+      margin: 2px;
+      margin-top: 7px;
+    }
+
+    ::placeholder {
+      font-style: italic;
+      color: black;
+    }
+
+    input {
+
+      font-weight: normal;
+      font-size: 13px;
+      margin-top: 5px;
+      font-style: italic;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    #s-client {
+      margin-top: 100px;
+      height: 45px;
+      margin: 0;
+      padding: 0;
+      padding-left: 30px;
+      padding-top: 10px;
+      font-size: 17px;
+      font-weight: 500;
+      background-color: #e8f1f3;
+      border-bottom: 1px solid #b7b9bf;
+      width: 300px;
+    }
   }
-  #s-client{
-    margin-top: 100px;
-    font-size: 19px;
-    font-weight: bold;
-    color: #3b444b;
-    font-style: italic;
-  }
-}
-  .clients-table{
+
+  .clients-table {
     margin-top: 30px;
+    max-width: 60%;
     table {
       width: 100%;
     }
+
     .mat-form-field {
       font-size: 12px;
       width: 100%;
     }
-    .mat-cell{
+
+    .mat-cell {
       font-size: unset;
       color: unset;
       font-weight: unset;
     }
-    .mat-header-cell{
+
+    .mat-header-cell {
       font-size: 14px;
       font-weight: bold;
       color: #3b444b;
     }
+
     th.mat-sort-header-sorted {
       color: black;
     }
+
     margin-left: 20px;
     margin-right: 20px;
-    tr#tds{
+
+    tr#tds {
       font-size: 13px;
       font-weight: normal;
     }
-    tr#tds:hover{
+
+    tr#tds:hover {
       font-size: 13px;
       cursor: pointer;
     }
+
     .selected {
       font-size: 13px;
       background-color: #388E8E;
@@ -112,7 +149,8 @@
       font-weight: bold;
     }
   }
-  .update-button{
+
+  .update-button {
     background-color: #388E8E;
     color: white;
     width: 100px;
@@ -121,52 +159,59 @@
     border-radius: 4px;
     margin-top: 20px;
   }
-  button:hover{
+
+  button:hover {
     background-color: #528B8B;
     cursor: pointer;
   }
+
   button:disabled {
     opacity: 0.9;
     cursor: not-allowed;
     background-color: #388E8E;
   }
-        .succes{
-        margin-top: 30px;
-        color: #3CB371;
-        font-weight: bold;
-        font-size: 13px;
-      }
-        #hideMe {
-          -moz-animation: cssAnimation 0s ease-in 3s forwards;
-          /* Firefox */
-          -webkit-animation: cssAnimation 0s ease-in 3s forwards;
-          /* Safari and Chrome */
-          -o-animation: cssAnimation 0s ease-in 3s forwards;
-          /* Opera */
-          animation: cssAnimation 0s ease-in 3s forwards;
-          -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-         
-      }
-      @keyframes cssAnimation {
-          to {
-              width:0;
-              height:0;
-              overflow:hidden;
-          }
-      }
-      @-webkit-keyframes cssAnimation {
-          to {
-              width:0;
-              height:0;
-              visibility:hidden;
-          }
-      }
-       
- 
+
+  .succes {
+    margin-top: 30px;
+    color: #3CB371;
+    font-weight: bold;
+    font-size: 13px;
+  }
+
+  #hideMe {
+    -moz-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 3s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+  }
+
+  @keyframes cssAnimation {
+    to {
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+
+  @-webkit-keyframes cssAnimation {
+    to {
+      width: 0;
+      height: 0;
+      visibility: hidden;
+    }
+  }
+
+
 }
-p{
-  margin-left:50px;
+
+p {
+  margin-left: 50px;
 }
 
 #noButton {
@@ -180,7 +225,8 @@ p{
   margin-left: 170px;
   font-weight: bold;
 }
-#refresh{
+
+#refresh {
   font-size: 12px;
   font-weight: bold;
   color: black;
