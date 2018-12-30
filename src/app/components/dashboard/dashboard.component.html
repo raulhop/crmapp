@@ -53,27 +53,82 @@
     </div>
   </div>
   <div class="middle-dashboard row">
-    <div class="pie-ch">
-      <canvas id="pieChart"></canvas>
-      <script>
-        //pie
-        var ctxP = document.getElementById("pieChart").getContext('2d');
-        var myPieChart = new Chart(ctxP, {
-          type: 'pie',
-          data: {
-            labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
-            datasets: [{
-              data: [300, 50, 100, 40, 120],
-              backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
-              hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
-            }]
-          },
-          options: {
-            responsive: true
-          }
-        });
-
-      </script>
+    <div class="event-panel col-md-6">
+      <div class="events-title">Upcoming events</div>
+      <div class="events">
+        <div class="event row">
+          <div class="event-date col-sm">
+            <div class="event-day">21</div>
+            <div class="event-month">DEC</div>
+          </div>
+          <div class="event-info col-sm">
+            <div class="event-name">Sale scheduled</div>
+            <div class="event-detail">Timisoara, str. M. Viteazul nr.2</div>
+          </div>
+          <div class="event-type col-sm">
+            <div class="type">
+              meeting
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="event row">
+          <div class="event-date col-sm">
+            <div class="event-day">13</div>
+            <div class="event-month">JAN</div>
+          </div>
+          <div class="event-info col-sm">
+            <div class="event-name">Business schedule</div>
+            <div class="event-detail">England, Liverpool</div>
+          </div>
+          <div class="event-type col-sm">
+            <div class="type">
+              skype
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="event row">
+          <div class="event-date col-sm">
+            <div class="event-day">11</div>
+            <div class="event-month">FEB</div>
+          </div>
+          <div class="event-info col-sm">
+            <div class="event-name">Rent scheduled</div>
+            <div class="event-detail">Bucuresti, str. I.Creanga nr.42</div>
+          </div>
+          <div class="event-type col-sm">
+            <div class="type">
+              meeting
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="event row">
+          <div class="event-date col-sm">
+            <div class="event-day">29</div>
+            <div class="event-month">DEC</div>
+          </div>
+          <div class="event-info col-sm">
+            <div class="event-name">Marketing policy</div>
+            <div class="event-detail">France, Lyon</div>
+          </div>
+          <div class="event-type col-sm">
+            <div class="type">
+              phone
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="col-md-6">s</div>
+    <!-- <div style="display: block">
+          <canvas baseChart
+                  [data]="pieChartData"
+                  [labels]="pieChartLabels"
+                  [chartType]="pieChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"></canvas>
+        </div>-->
   </div>
 </div>

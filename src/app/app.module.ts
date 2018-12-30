@@ -20,6 +20,7 @@ import { UpdateClientComponent } from './components/update-client/update-client.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component'
+import { ChartsModule } from 'ng2-charts';
 
 const ROUTES: Routes = [
   {
@@ -45,6 +46,7 @@ const ROUTES: Routes = [
   ],
   imports: [
     BrowserModule,
+    ChartsModule,
     AppBootstrapModule,
     FormsModule,
     MaterialModule,
