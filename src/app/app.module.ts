@@ -21,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component'
 import { ChartsModule } from 'ng2-charts';
-import { FooterComponent } from './components/footer/footer.component'
+import { FooterComponent } from './components/footer/footer.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 const ROUTES: Routes = [
   {
     path: '',
@@ -60,7 +61,11 @@ const ROUTES: Routes = [
     ),
     RouterModule.forRoot(ROUTES)
   ],
+   exports:[
+    MaterialModule
+  ],
   providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Client } from '../../models/client.interface';
 import { ClientService } from '../../services/client/client.service';
 import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
+import { AccountService } from 'src/app/services/account/account.service';
 
 @Component({
     selector: 'app-delete-client',
@@ -29,11 +30,14 @@ export class DeleteClientComponent {
     }
     public getClients(): void {
         this.clientService.getClients().subscribe((data: Client[]) => {
+            data = data.filter((client: Client) => {
+                return client.userId == this.accountService.loggedInUser.id;
+            });
             this.clientService.clients = data;
             this.dataSource.data = data;
         });
     }
-    constructor(private clientService: ClientService) { }
+    constructor(private clientService: ClientService, private accountService: AccountService) { }
 
     public deleteClient() {
         this.clientService.deleteClient(this.selectedClient).subscribe((data: Client) => {

@@ -48,7 +48,7 @@
     },
     {
       "id": 3,
-      "firstName": "Gigela",
+      "firstName": "Gigel",
       "lastName": "Ioan",
       "dob": "2018-12-13",
       "number": "0762517263",
@@ -68,11 +68,11 @@
       "city": "Tokyo",
       "email": "giuly@yahoo.jp",
       "action": "rent",
-      "userId": 99
+      "userId": 3
     },
     {
       "id": 5,
-      "firstName": "Mircea",
+      "firstName": "Marcel",
       "lastName": "Lungu",
       "dob": "1994-12-11",
       "number": "0741625725",
@@ -80,7 +80,7 @@
       "city": "Timisoara",
       "email": "mircea@gmail.com",
       "action": "rent",
-      "userId": 0
+      "userId": 3
     },
     {
       "id": 6,
@@ -92,7 +92,7 @@
       "city": "Timisoara",
       "email": "dani@gmail.com",
       "action": "rent",
-      "userId": 99
+      "userId": 3
     },
     {
       "id": 7,
@@ -139,6 +139,18 @@
       "country": "Romania",
       "city": "Cluj",
       "email": "mutu_adi@yahoo.com",
+      "action": "sale",
+      "userId": 99
+    },
+    {
+      "id": 11,
+      "firstName": "Floricel",
+      "lastName": "Alin",
+      "dob": "2019-01-10",
+      "number": "0282112321",
+      "country": "Romania",
+      "city": "Lugoj",
+      "email": "a@b.com",
       "action": "sale",
       "userId": 99
     }

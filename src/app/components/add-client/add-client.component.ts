@@ -31,9 +31,15 @@ export class AddClientComponent implements OnInit {
         this.dataSource.filter = filterValue.trim().toLowerCase();
     }
     public getClients(): void {
+        
+        console.log("User id:",this.accountService.loggedInUser.id);
         this.clientService.getClients().subscribe((data: Client[]) => {
+            data = data.filter((client: Client) => {
+                return client.userId == this.accountService.loggedInUser.id;
+            });
             this.clientService.clients = data;
             this.dataSource.data = data;
+
         });
     }
     public addClient(firstName: string, lastName: string, dob: Date, number: string, country: string, city: string, email: string, action: string) {

@@ -72,6 +72,9 @@ export class UpdateClientComponent {
 
     public getClients(): void {
         this.clientService.getClients().subscribe((data: Client[]) => {
+            data = data.filter((client: Client) => {
+                return client.userId == this.accountService.loggedInUser.id;
+            });
             this.clientService.clients = data;
             this.dataSource.data = data;
         });
