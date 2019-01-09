@@ -10,11 +10,12 @@ import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
     styleUrls: ['./add-client.component.scss']
 })
 
+
 export class AddClientComponent implements OnInit {
     public client: Client;
     public added: boolean;
     public already: boolean;
-
+    public clients: Client[]= [];
     displayedColumns: string[] = ['id', 'firstName', 'lastName', 'action', 'email'];
     dataSource = new MatTableDataSource<Client>();
     @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -32,14 +33,13 @@ export class AddClientComponent implements OnInit {
     }
     public getClients(): void {
         
-        console.log("User id:",this.accountService.loggedInUser.id);
-        this.clientService.getClients().subscribe((data: Client[]) => {
+            this.clientService.getClients().subscribe((data: Client[]) => {
             data = data.filter((client: Client) => {
                 return client.userId == this.accountService.loggedInUser.id;
             });
             this.clientService.clients = data;
             this.dataSource.data = data;
-
+            this.clients = data;
         });
     }
     public addClient(firstName: string, lastName: string, dob: Date, number: string, country: string, city: string, email: string, action: string) {

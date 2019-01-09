@@ -15,8 +15,9 @@ export class ClientService {
 
   public clients: Client[];
 
-  constructor(private http: Http) {
+  constructor(private http?: Http) {
   }
+
 
   public getClients(): Observable<Client[]> {
     return this.http
@@ -25,6 +26,7 @@ export class ClientService {
         map((response: Response) => response.json())
       );
   }
+
 
   public addClient(client : Client): Observable<Client> {
     return this.http

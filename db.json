@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 0,
+      "id": 3,
       "firstName": "Andrei",
       "lastName": "Netotea",
       "dob": "1996-12-12",
@@ -92,7 +92,7 @@
       "city": "Timisoara",
       "email": "dani@gmail.com",
       "action": "rent",
-      "userId": 3
+      "userId": 99
     },
     {
       "id": 7,
@@ -153,6 +153,18 @@
       "email": "a@b.com",
       "action": "sale",
       "userId": 99
+    },
+    {
+      "id": 12,
+      "firstName": "Daniel",
+      "lastName": "Gligor",
+      "dob": "1996-10-04",
+      "number": "0761775637",
+      "country": "Romania",
+      "city": "Timisoara",
+      "email": "dani@yahoo.com",
+      "action": "sale",
+      "userId": 3
     }
   ]
 }
