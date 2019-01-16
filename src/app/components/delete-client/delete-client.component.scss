@@ -37,9 +37,20 @@
       font-size: 12px;
       width: 100%;
     }
+    i{
+      font-size: 20px;
+    }
+    i:hover{
+      color: white;
+      font-size: 21px;
+    }
+  
     .mat-cell{
       font-size: unset;
       color: unset;
+    }
+    .mat-column-select{
+      flex: 0 0 100px;
     }
     .mat-header-cell{
       font-size: 14px;

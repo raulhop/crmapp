@@ -9,4 +9,5 @@ export interface Client{
     email: string;
     action: string;
     userId: number;
+    selected?: boolean;
 }

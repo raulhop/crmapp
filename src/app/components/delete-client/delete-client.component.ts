@@ -11,10 +11,13 @@ import { AccountService } from 'src/app/services/account/account.service';
 })
 
 export class DeleteClientComponent {
-    public selectedClient: Client;
+    public canDelete: boolean = false;
     public deleted: boolean;
+    public nrOfSelectedClients: number = 0;
+    public iterator: number;
+    public once: boolean = false;
 
-    displayedColumns: string[] = ['id', 'firstName', 'lastName', 'dob', 'country', 'city', 'action', 'email', 'number'];
+    displayedColumns: string[] = ['id', 'firstName', 'lastName', 'dob', 'country', 'city', 'action', 'email', 'number', 'select'];
     dataSource = new MatTableDataSource<Client>();
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
@@ -40,16 +43,66 @@ export class DeleteClientComponent {
     constructor(private clientService: ClientService, private accountService: AccountService) { }
 
     public deleteClient() {
-        this.clientService.deleteClient(this.selectedClient).subscribe((data: Client) => {
-            this.clientService.clients = this.clientService.clients.filter((client: Client) => {
-                return client.id !== this.selectedClient.id;
-            });
-            this.deleted = true;
-            this.getClients();
+        this.iterator = 0;
+        this.clientService.clients.forEach(element => {
+            if (element.selected) {
+                this.clientService.deleteClient(element).subscribe((data: Client) => {
+                    this.clientService.clients = this.clientService.clients.filter((client: Client) => {
+                        return client.id !== element.id;
+                    });
+                    this.iterator++;
+                    console.log("iterator: ",this.iterator);
+                    console.log("nrOfSelect: ", this.nrOfSelectedClients);
+                    if (this.iterator == this.nrOfSelectedClients) {
+                        this.getClients();
+                        this.nrOfSelectedClients = 0;
+                        console.log("gett");
+                    }
+                });
+            }
         });
+        this.deleted = true;
+
+    }
+
+    checkNrOfSelectedClients() {
+        if (this.nrOfSelectedClients > 0) {
+            this.canDelete = true;
+
+        }
+        else {
+            this.canDelete = false;
+        }
     }
 
     public onSelect(client: Client) {
-        this.selectedClient = client;
+        this.canDelete = true;
+        if (!this.once) {
+            this.clientService.clients.forEach(element => {
+                if (client.id == element.id && !element.selected) {
+                    element.selected = true;
+                    this.nrOfSelectedClients++;
+                }
+            });
+            console.log("select",this.nrOfSelectedClients);
+        }
+        else {
+            this.once = false;
+        }
+        this.checkNrOfSelectedClients();
+
+    }
+
+    public unselect(client: Client) {
+        this.clientService.clients.forEach(element => {
+            if (element.id == client.id) {
+                element.selected = false;
+                this.once = true;
+                this.nrOfSelectedClients--;
+            }
+        });
+        this.checkNrOfSelectedClients();
+        console.log("unselect",this.nrOfSelectedClients);
+
     }
 }
