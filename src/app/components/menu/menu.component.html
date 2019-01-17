@@ -104,7 +104,7 @@
       <div class="dropdown show">
         <a class="nav-item nav-link dropdown-toggle" href role="button" id="dropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
-          {{this.accountService.loggedInUser.firstName}} {{this.accountService.loggedInUser.lastName}}
+          {{loggedInUser.firstName}} {{loggedInUser.lastName}}
           <i class="fa fa-user"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
@@ -123,7 +123,7 @@
     <div class="modal-content" id="logoutModalContent">
       <div class="modal-body">
         <div>Are you sure you want to log out from your account?</div>
-        <button type="button" id="yesButton" routerLink="/login">Yes</button>
+        <button type="button" id="yesButton" (click)="logOut()">Yes</button>
         <button type="button" id="noButton" data-dismiss="modal">No</button>
       </div>
     </div>

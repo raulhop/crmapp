@@ -17,16 +17,6 @@ export class AccountService {
 
   public users: Account[];
   
-  public loggedInUser: Account = {
-    id: 99,
-    firstName: "User",
-    lastName: "Mock",
-    dob: "1996-12-12",
-    country : "USA",
-    city: "Chicago",
-    email: "mock.user@gmail.com",
-    password: "12345"
-  };
 
   constructor(private http: Http) {
   }

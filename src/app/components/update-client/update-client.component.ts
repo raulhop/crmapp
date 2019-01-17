@@ -14,6 +14,9 @@ export class UpdateClientComponent {
     public selectedClient: Client;
     public edit: boolean = true;
     public edited: boolean;
+    public loggedInUser: Account;
+
+
     displayedColumns: string[] = ['id', 'firstName', 'lastName', 'action'];
     dataSource = new MatTableDataSource<Client>();
     @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -23,6 +26,8 @@ export class UpdateClientComponent {
         this.getClients();
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
+        this.loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
     }
     constructor(private clientService: ClientService, private accountService: AccountService) { }
 
@@ -48,7 +53,7 @@ export class UpdateClientComponent {
             city: city,
             email: email,
             action: action,
-            userId: this.accountService.loggedInUser.id
+            userId: parseInt(this.loggedInUser.id)
         };
 
         this.onSave();
@@ -73,7 +78,7 @@ export class UpdateClientComponent {
     public getClients(): void {
         this.clientService.getClients().subscribe((data: Client[]) => {
             data = data.filter((client: Client) => {
-                return client.userId == this.accountService.loggedInUser.id;
+                return client.userId == parseInt(this.loggedInUser.id);
             });
             this.clientService.clients = data;
             this.dataSource.data = data;

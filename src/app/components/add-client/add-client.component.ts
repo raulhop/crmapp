@@ -16,6 +16,8 @@ export class AddClientComponent implements OnInit {
     public added: boolean;
     public already: boolean;
     public clients: Client[]= [];
+    public loggedInUser: Account;
+
     displayedColumns: string[] = ['id', 'firstName', 'lastName', 'action', 'email'];
     dataSource = new MatTableDataSource<Client>();
     @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -25,6 +27,7 @@ export class AddClientComponent implements OnInit {
         this.getClients();
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
+        this.loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
     }
     constructor(private clientService: ClientService, private accountService: AccountService) { }
 
@@ -35,7 +38,7 @@ export class AddClientComponent implements OnInit {
         
             this.clientService.getClients().subscribe((data: Client[]) => {
             data = data.filter((client: Client) => {
-                return client.userId == this.accountService.loggedInUser.id;
+                return client.userId == parseInt(this.loggedInUser.id);
             });
             this.clientService.clients = data;
             this.dataSource.data = data;
@@ -46,7 +49,7 @@ export class AddClientComponent implements OnInit {
         this.already = false;
         let date: string = dob.toString();
         let id: number = this.clientService.clients[this.clientService.clients.length - 1].id + 1;
-        let userId: number = this.accountService.loggedInUser.id;
+        let userId: number = parseInt(this.loggedInUser.id);
         this.client = {
             id: id,
             firstName: firstName,

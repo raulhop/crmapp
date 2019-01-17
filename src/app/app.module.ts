@@ -23,12 +23,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component'
 import { ChartsModule } from 'ng2-charts';
 import { FooterComponent } from './components/footer/footer.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
 const ROUTES: Routes = [
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  }
+  { path: '**', component: PageNotFoundComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 
@@ -44,7 +43,8 @@ const ROUTES: Routes = [
     DeleteClientComponent,
     UpdateClientComponent,
     DashboardComponent,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

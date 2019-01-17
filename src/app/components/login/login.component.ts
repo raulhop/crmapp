@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
             console.log(element);
             if (email == element.email && password == element.password) {
                 this.router.navigate(['/home']);
-                this.accountService.loggedInUser = element;
+                localStorage.setItem('loggedInUser', JSON.stringify(element));
             }
             else {
                 this.error = true;

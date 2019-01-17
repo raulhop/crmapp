@@ -45,7 +45,7 @@ export class RegisterComponent implements OnInit {
             .addUser(this.user)
             .subscribe((user: Account) => {
                 this.accountService.users.push(user);
-                this.accountService.loggedInUser = this.user;
+                localStorage.setItem('loggedInUser', JSON.stringify(this.user));
             });
         console.log(this.accountService.users);
     }

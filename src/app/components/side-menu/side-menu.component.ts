@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AccountService } from '../../services/account/account.service';
 
 @Component({
@@ -6,7 +6,15 @@ import { AccountService } from '../../services/account/account.service';
   templateUrl: './side-menu.component.html',
   styleUrls: ['./side-menu.component.scss']
 })
-export class SideMenuComponent {
-  constructor(private accountService: AccountService){}
+export class SideMenuComponent implements OnInit{
+
+  public loggedInUser: Account;
+
+  ngOnInit(){
+    this.loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  }
+
+  constructor(){}
+
   
 }

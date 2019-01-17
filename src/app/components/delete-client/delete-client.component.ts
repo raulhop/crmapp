@@ -16,6 +16,7 @@ export class DeleteClientComponent {
     public nrOfSelectedClients: number = 0;
     public iterator: number;
     public once: boolean = false;
+    public loggedInUser: Account;
 
     displayedColumns: string[] = ['id', 'firstName', 'lastName', 'dob', 'country', 'city', 'action', 'email', 'number', 'select'];
     dataSource = new MatTableDataSource<Client>();
@@ -26,6 +27,7 @@ export class DeleteClientComponent {
         this.getClients();
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
+        this.loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
     }
 
     applyFilter(filterValue: string) {
@@ -34,7 +36,7 @@ export class DeleteClientComponent {
     public getClients(): void {
         this.clientService.getClients().subscribe((data: Client[]) => {
             data = data.filter((client: Client) => {
-                return client.userId == this.accountService.loggedInUser.id;
+                return client.userId == parseInt(this.loggedInUser.id);
             });
             this.clientService.clients = data;
             this.dataSource.data = data;
@@ -103,6 +105,5 @@ export class DeleteClientComponent {
         });
         this.checkNrOfSelectedClients();
         console.log("unselect",this.nrOfSelectedClients);
-
     }
 }
