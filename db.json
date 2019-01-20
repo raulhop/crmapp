@@ -1,6 +1,5 @@
 {
-  "users": [
-    {
+  "users": [{
       "id": 99,
       "firstName": "Andrei",
       "lastName": "Netotea",
@@ -21,8 +20,7 @@
       "password": "12345"
     }
   ],
-  "clients": [
-    {
+  "clients": [{
       "id": 1,
       "firstName": "Raul",
       "lastName": "Hopota",
@@ -142,5 +140,37 @@
       "action": "sale",
       "userId": 99
     }
-  ]
+  ],
+  "residence": [{
+    "id": 1,
+    "title": "Apartament 3 camere, Decomandat",
+    "zone": "Timisoara, zona Aradului",
+    "images": ["https://img2.imonet.ro/XABP/ABP00ICP29I/apartament-de-vanzare-3-camere-timisoara-aradului-105925212.jpg"],
+    "price": 85000,
+    "location": 123,
+    "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    "features": [
+      {
+        "nrOfRooms": 2,
+        "area": 123,
+        "partitioning": "decomandat",
+        "confort": "lux",
+        "floors": "1/3",
+        "kitchens:": 1,
+        "bathrooms": 1,
+        "buildingYear": 2017,
+        "structure": "beton",
+        "estateType": "bloc cu apartamente",
+        "balconies": 2,
+        "parkingSpots": 0
+      }
+    ],
+    "specifications": [
+      {
+        "utilities": "Curent, Apa, Canalizare, Gaz, CATV, Telefon, Telefon international",
+        "features": "Bucatarie utilata, Contor gaz, Apometre, Telecomanda poarta acces auto, Curte, Gradina, Interfon, Lift",
+        "neighborhood": "Penny, Flanco, Mol"
+      }
+    ]
+  }]
 }

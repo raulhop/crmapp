@@ -24,6 +24,7 @@ import { ChartsModule } from 'ng2-charts';
 import { FooterComponent } from './components/footer/footer.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AdsComponent } from './components/ads/ads.component';
 
 const ROUTES: Routes = [
   { path: '**', component: PageNotFoundComponent },
@@ -44,7 +45,8 @@ const ROUTES: Routes = [
     UpdateClientComponent,
     DashboardComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AdsComponent
   ],
   imports: [
     BrowserModule,

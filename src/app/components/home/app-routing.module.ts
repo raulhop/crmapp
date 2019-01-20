@@ -10,6 +10,7 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
 import { AuthGuard } from 'src/app/guards/auth.guard';
 import { LogOutGuard } from 'src/app/guards/logout.guard';
+import { AdsComponent } from '../ads/ads.component';
 
 const routes: Routes = [
     {
@@ -21,7 +22,8 @@ const routes: Routes = [
             { path: 'add-client', component: AddClientComponent },
             { path: 'delete-client', component: DeleteClientComponent },
             { path: 'update-client', component: UpdateClientComponent },
-            { path: 'dashboard', component: DashboardComponent }
+            { path: 'dashboard', component: DashboardComponent },
+            { path: 'ads', component: AdsComponent }
         ]
     },
     {

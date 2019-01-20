@@ -53,7 +53,7 @@ export class DeleteClientComponent {
                         return client.id !== element.id;
                     });
                     this.iterator++;
-                    console.log("iterator: ",this.iterator);
+                    console.log("iterator: ", this.iterator);
                     console.log("nrOfSelect: ", this.nrOfSelectedClients);
                     if (this.iterator == this.nrOfSelectedClients) {
                         this.getClients();
@@ -86,7 +86,6 @@ export class DeleteClientComponent {
                     this.nrOfSelectedClients++;
                 }
             });
-            console.log("select",this.nrOfSelectedClients);
         }
         else {
             this.once = false;
@@ -104,6 +103,5 @@ export class DeleteClientComponent {
             }
         });
         this.checkNrOfSelectedClients();
-        console.log("unselect",this.nrOfSelectedClients);
     }
 }

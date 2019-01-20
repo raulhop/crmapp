@@ -4,8 +4,7 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { map, filter, catchError, mergeMap } from 'rxjs/operators';
-import { userInfo } from 'os';
-import { Mock } from 'protractor/built/driverProviders';
+
 
 const API_URL = environment.apiUrl;
 
@@ -17,7 +16,6 @@ export class AccountService {
 
   public users: Account[];
   
-
   constructor(private http: Http) {
   }
 

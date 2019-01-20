@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { AccountService } from 'src/app/services/account/account.service';
-import { Client } from '../../models/client.interface';
-import { ClientService } from 'src/app/services/client/client.service';
+import { ResidenceService } from 'src/app/services/residence/residence.service';
+import { Residence } from 'src/app/models/residence.interface';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +9,7 @@ import { ClientService } from 'src/app/services/client/client.service';
 })
 export class HomeComponent {
 
-  constructor(private accountService: AccountService, private clientService: ClientService) { }
+  constructor(private residenceService: ResidenceService) { }
   ngOnInit() {
-    
   }
- 
 }

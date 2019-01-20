@@ -20,79 +20,95 @@
   }
 
   .add-client-content {
-    .client-list{
+    .client-list {
       margin-left: 20px;
       margin-top: 40px;
+
       table {
         width: 100%;
       }
+
       .mat-form-field {
         font-size: 12px;
         width: 100%;
       }
-      .mat-cell{
+
+      .mat-cell {
         font-size: unset;
         color: unset;
       }
-      .mat-header-cell{
+
+      .mat-header-cell {
         font-size: 14px;
         font-weight: bold;
         color: #3b444b;
+        background-color: #e8f1f3;
+
       }
+
       th.mat-sort-header-sorted {
         color: black;
       }
+
       margin-left: 20px;
       margin-right: 20px;
-      tr#tds{
+
+      tr#tds {
         font-size: 13px;
         font-weight: normal;
       }
+
       .error {
         font-size: 14px;
         color: red;
         font-weight: bold;
       }
-      .succes{
+
+      .succes {
         color: #3CB371;
         font-weight: bold;
-        #refresh{
+
+        #refresh {
           color: black;
           font-weight: bold;
           font-size: 12px;
         }
       }
-        #hideMe {
-          -moz-animation: cssAnimation 0s ease-in 5s forwards;
-          /* Firefox */
-          -webkit-animation: cssAnimation 0s ease-in 5s forwards;
-          /* Safari and Chrome */
-          -o-animation: cssAnimation 0s ease-in 5s forwards;
-          /* Opera */
-          animation: cssAnimation 0s ease-in 5s forwards;
-          -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-         
+
+      #hideMe {
+        -moz-animation: cssAnimation 0s ease-in 5s forwards;
+        /* Firefox */
+        -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+        /* Safari and Chrome */
+        -o-animation: cssAnimation 0s ease-in 5s forwards;
+        /* Opera */
+        animation: cssAnimation 0s ease-in 5s forwards;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
       }
+
       @keyframes cssAnimation {
-          to {
-              width:0;
-              height:0;
-              overflow:hidden;
-          }
+        to {
+          width: 0;
+          height: 0;
+          overflow: hidden;
+        }
       }
+
       @-webkit-keyframes cssAnimation {
-          to {
-              width:0;
-              height:0;
-              visibility:hidden;
-          }
+        to {
+          width: 0;
+          height: 0;
+          visibility: hidden;
+        }
       }
-       
-      
+
+
     }
+
     .client-form {
-     
+
       margin-top: 60px;
       margin-left: 50px;
 
